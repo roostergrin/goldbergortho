@@ -1,0 +1,12 @@
+.pages-inner
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap.content_full
+      .container_manual.clearfix
+        #content_left
+          h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
+          .content_all(v-if='props.content.rendered' v-html:span='props.content.rendered')
+    Footer()        
+      

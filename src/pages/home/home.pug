@@ -1,0 +1,114 @@
+.pages-home
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage_content_wrap
+
+        .homepage_slider
+          .slider-home(v-if='props.acf.homepage_slider_list')
+            swiper(:options='swiperOption1')
+              swiper-slide(v-for='(homeSlider, index) in props.acf.homepage_slider_list')
+                img(v-bind:src='homeSlider.bg_image')
+                .container_manual.clearfix
+                  .home_slider_outerr
+                    .home_slider_heading(v-html='homeSlider.heading')
+                    .home_slider_content(v-html='homeSlider.desc') 
+              .swiper-pagination(slot='pagination')        
+              .swiper_controll
+                .swiper-button-prev.swiper-button-white(slot='button-prev')
+                  .fa.fa-arrow-circle-left
+                .swiper-button-next.swiper-button-white(slot='button-next') 
+                  .fa.fa-arrow-circle-right
+                  
+          .slider-after-heading(v-if='props.acf.after_slider_heading' v-html:span='props.acf.after_slider_heading')                  
+            
+        .callouts_section(v-bind:style="{ backgroundImage: 'url('+ props.acf.callout_section_bg +')'}") 
+          .container_manual.clearfix(v-if='props.acf.callout_list')
+            router-link(v-bind:to='CalloutList.url' v-for='(CalloutList, index) in props.acf.callout_list')
+              .co-icon
+                i.fa(v-if='CalloutList.icon' v-bind:class='CalloutList.icon')
+              .co-text(v-if='CalloutList.text' v-html:span='CalloutList.text')
+              
+        .services_section(v-bind:style="{ backgroundImage: 'url('+ props.acf.service_section_bg +')'}") 
+          .container_manual.clearfix
+             u-animate-container.clearfix
+              u-animate.callout(name='fadeInUp' delay='0s' duration='1.2s' :iteration='1' :offset='0' animateclass='animated' :begin='false')
+                router-link(v-if='props.acf.service_item_1_url' v-bind:to='props.acf.service_item_1_url')
+                  .inner
+                    img.photo(v-if='props.acf.service_item_1_img' v-bind:src='props.acf.service_item_1_img' alt='')
+                    .main(v-if='props.acf.service_item_1' v-html:span='props.acf.service_item_1')
+              u-animate.callout.callout2(name='zoomIn' delay='0s' duration='1.2s' :iteration='1' :offset='0' animateclass='animated' :begin='false')
+                router-link(v-if='props.acf.service_item_2_url' v-bind:to='props.acf.service_item_2_url')
+                  .inner
+                    img.photo(v-if='props.acf.service_item_2_img' v-bind:src='props.acf.service_item_2_img' alt='')
+                    .main(v-if='props.acf.service_item_2_name' v-html:span='props.acf.service_item_2_name')
+              u-animate.callout.callout3.wow.zoomIn(name='zoomIn' delay='1.2s' duration='1s' :iteration='1' :offset='0' animateclass='animated' :begin='false')
+                router-link(v-if='props.acf.service_item_3_url' v-bind:to='props.acf.service_item_3_url')
+                  .inner
+                    img.photo(v-if='props.acf.service_item_3_img' v-bind:src='props.acf.service_item_3_img' alt='')
+                    .main(v-if='props.acf.service_item_3_name' v-html:span='props.acf.service_item_3_name')
+                    
+        .home-content_section  
+          .container_manual.clearfix
+            .home-content_left
+              h1(v-if='props.acf.welcome_section_title' v-html:span='props.acf.welcome_section_title')
+              .testimonials-home 
+                h3(v-if='props.acf.our_patient_title' v-html:span='props.acf.our_patient_title')
+                .testimonials-home-outer(v-if='propstestimonial.acf.testimonials_rating_list')
+                  swiper(:options='swiperOption2')
+                    swiper-slide(v-for='(hometestimonailSlider, index) in propstestimonial.acf.testimonials_rating_list')
+                      .home_star
+                          span(v-if='hometestimonailSlider.stars== 1') 
+                            i.fa.fa-star
+                          span(v-if='hometestimonailSlider.stars== 2')
+                            i.fa.fa-star
+                            i.fa.fa-star
+                          span(v-if='hometestimonailSlider.stars== 3')
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                          span(v-if='hometestimonailSlider.stars== 4')
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                          span(v-if='hometestimonailSlider.stars== 5')
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                            i.fa.fa-star
+                      .home_rate_list
+                        .home_rate_list_content(v-if='hometestimonailSlider.content' v-html='hometestimonailSlider.content')
+                        .home_rate_meta
+                          span(v-if='hometestimonailSlider.autor' v-html='hometestimonailSlider.autor') 
+                          span from 
+                          span(v-if='hometestimonailSlider.location' v-html='hometestimonailSlider.location')
+                          span , 
+                          span(v-if='hometestimonailSlider.date' v-html='hometestimonailSlider.date')                         
+            .home-content_right(v-if='props.acf.welcome_right_section_content' v-html:span='props.acf.welcome_right_section_content')
+
+            
+        .patient_testimonials(v-bind:style="{ backgroundImage: 'url('+ props.acf.patients_love_bg +')'}") 
+          .container_manual.clearfix
+            h2(v-if='props.acf.patients_love_title' v-html:span='props.acf.patients_love_title')
+            .testimonial-slide-home(v-if='props.acf.patients_love_list')
+                swiper(:options='swiperOption3')
+                  swiper-slide(v-for='(pateintLoveList, index) in props.acf.patients_love_list')
+                    .slide_test_inner
+                      router-link(to='/testimonials')
+                        p.testi_content(v-if='pateintLoveList.content' v-html='pateintLoveList.content') 
+                        p.authorr
+                          span ~ 
+                          span(v-if='pateintLoveList.author' v-html='pateintLoveList.author') 
+                  .swiper-button-prev(slot='button-prev')
+                    .fa.fa-arrow-circle-left
+                  .swiper-button-next(slot='button-next')
+                    .fa.fa-arrow-circle-right
+          
+        .client_logo_section
+          .container_manual.clearfix(v-if='props.acf.client_logo_list')
+            router-link(v-bind:to='ClientlogoList.url' v-for='(ClientlogoList, index) in props.acf.client_logo_list')
+              img(v-bind:src='ClientlogoList.img' v-bind:alt='"clientlogo" + index')          
+    Footer()   
+      

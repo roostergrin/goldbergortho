@@ -1,0 +1,29 @@
+<template lang='pug' src='./appointment-request.pug'></template>
+
+<script>
+import Loader from 'components/loader/loader'
+import Header from 'components/header/header'
+import Footer from 'components/footer/footer'
+import AppointmentRequestForm from 'components/form/appointment-request-form/appointment-request-form'
+
+export default {
+  name: 'appointment-request',
+  computed: {
+    props () {
+      return this.$store.state.pages['appointment-request']
+    },
+    propspageheader () {
+      return this.$store.state.app['header']
+    },
+    loading () {
+      return this.$store.state.loading
+    }
+  },
+  components: {
+    Loader,
+    Header,
+    Footer,
+    AppointmentRequestForm
+  }
+}
+</script>

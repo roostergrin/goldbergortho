@@ -1,0 +1,21 @@
+.footer(v-if='props')
+  .footer_map_widget(v-bind:style="{ backgroundImage: 'url('+ props.acf.footer_map_img +')'}")
+    .container_manual.clearfix
+      .ft-location
+        a(v-if='propsheader.acf.phone_number' v-bind:href='"tel:" + propsheader.acf.phone_number' itemprop='telephone')
+          span.phone(v-if='propsheader.acf.phone_number' v-html:span='propsheader.acf.phone_number')
+        router-link.ft-address(v-if='props.acf.footer_map_link_url' v-bind:to='props.acf.footer_map_link_url')
+          img.map-marker(v-if='props.acf.footer_map_locater_img' v-bind:src='props.acf.footer_map_locater_img' alt='map marker')
+          span(v-if='props.acf.address' v-html:span='props.acf.address')
+  .footer_copyright(v-bind:style="{ backgroundImage: 'url('+ props.acf.footer_copyright_bg +')'}") 
+    .container_manual.clearfix
+      .copyright_left
+        span &copy; {{ new Date().getFullYear() }} - 
+        span(v-if='props.acf.copyright_text' v-html:span='props.acf.copyright_text')  
+        span |  
+          router-link(v-if='props.acf.copyright_sitemap_url' v-bind:to='props.acf.copyright_sitemap_url') 
+            span(v-if='props.acf.copyright_sitemap_text' v-html:span='props.acf.copyright_sitemap_text') 
+      .copyright_right
+        .backtotop
+          a#back-to-top(href='#' v-scroll-to="'#app'") Back to Top    
+    

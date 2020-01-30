@@ -1,0 +1,31 @@
+.form-contact.appoint_form_outer
+  form.form-contact__form(@submit.prevent='validate', method='post')  
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': yourName }") 
+        b Your Name    
+      input.form-contact__input(name='yourName', v-model='yourName', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('yourName') }", type='text')
+      span.sub_names_form First and Last
+      .form-contact__error-message(v-show="errors.has('yourName')") Your name is required.
+      
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': email }") Your Email Address 
+      input.form-contact__input(name='email', v-model='email', v-validate="'email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') }")
+      .form-contact__error-message(v-show="errors.has('email')")  Please Input a Valid Email       
+    
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': phoneNumber }") 
+        b Your Phone Number 
+      input.form-contact__input(name='phoneNumber', v-model='phoneNumber', v-validate="'required|numeric'", :class="{ 'form-contact__input--error': errors.has('phoneNumber') }")
+      .form-contact__error-message(v-show="errors.has('phoneNumber')")  Please input a valid number     
+    
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': message }") Comment 
+      textarea.form-contact__textarea(name='message', v-model='message' :class="{ 'form-contact__input--error': errors.has('message') }", type='textarea')
+      .form-contact__error-message(v-show="errors.has('message')") Message is required.
+                 
+    .form-contact__group.form-contact__group--button
+      .form-contact__submit-button(:class="{ 'form-contact__submit-button--success': formSuccess }" @click='validate')
+        .form-contact__submit-overlay(:class="{ 'form-contact__submit-overlay--showing': formSubmitted  && !formSuccess }")
+        span.form-contact__submit-label(:class="{ 'form-contact__submit-label--hidden': formSuccess }") Submit Request
+        .form-contact__submit-success(:class="{ 'form-contact__submit-success--showing': formSuccess }")
+        span.form-contact__submit-check(:class="{ 'form-contact__submit-check--showing': formSuccess }")

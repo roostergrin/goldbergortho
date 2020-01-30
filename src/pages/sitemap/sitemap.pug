@@ -1,0 +1,146 @@
+.pages-inner
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap
+      .container_manual.clearfix
+        #content_left
+          h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
+          .content_all
+            ul.sitemap_menu
+              li
+                router-link( to='/' v-bind:class="{ active: isActive }") 
+                  span Home
+              li
+                router-link( to='/meet-dr-ira-goldberg' v-bind:class="{ active: isActive }") 
+                  span About Us              
+                ul.sub_menu
+                  li
+                    router-link( to='/meet-dr-ira-goldberg' v-bind:class="{ active: isActive }") 
+                      span Meet Dr. Ira Goldberg
+                  li
+                    router-link( to='/meet-the-team' v-bind:class="{ active: isActive }") 
+                      span Meet the Team 
+                  li
+                    router-link( to='/abo-certification' v-bind:class="{ active: isActive }") 
+                      span ABO Certification
+                  li
+                    router-link( to='/what-sets-us-apart' v-bind:class="{ active: isActive }") 
+                      span What Sets Us Apart
+              li
+                router-link( to='/office-visits' v-bind:class="{ active: isActive }") 
+                  span New Patients              
+                ul.sub_menu
+                  li
+                    router-link( to='/office-visits' v-bind:class="{ active: isActive }") 
+                      span Office Visits
+                  li
+                    router-link( to='/financial-information' v-bind:class="{ active: isActive }") 
+                      span Financial Information
+                  li
+                    router-link( to='/testimonials' v-bind:class="{ active: isActive }") 
+                      span Testimonials
+                  li
+                    router-link( to='/before-and-after' v-bind:class="{ active: isActive }") 
+                      span Before and After 
+                  li
+                    router-link( to='/office-tour' v-bind:class="{ active: isActive }") 
+                      span Office Tour
+                  li
+                    router-link( to='/patient-forms' v-bind:class="{ active: isActive }") 
+                      span Patient Forms
+              li
+                router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
+                  span About Ortho              
+                ul.sub_menu
+                  li
+                    router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
+                      span About Orthodontics
+                  li
+                    router-link( to='/for-all-ages' v-bind:class="{ active: isActive }") 
+                      span For All Ages
+                  li
+                    router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
+                      span Two-Phase Treatment
+                  li
+                    router-link( to='/types-of-braces' v-bind:class="{ active: isActive }") 
+                      span Types of Braces
+                  li
+                    router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
+                      span Palatal Expander
+                  li
+                    router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
+                      span Brushing and Flossing
+                  li
+                    router-link( to='/emergency-care' v-bind:class="{ active: isActive }") 
+                      span Emergency Care
+              li
+                router-link( to='/common-orthodontic-issues' v-bind:class="{ active: isActive }") 
+                  span Treatments              
+                ul.sub_menu
+                  li
+                    router-link( to='/common-orthodontic-issues' v-bind:class="{ active: isActive }") 
+                      span Common Orthodontic Issues
+                  li
+                    router-link( to='/surgical-orthodontics' v-bind:class="{ active: isActive }") 
+                      span Surgical Orthodontics
+                  li
+                    router-link( to='/dentofacial-orthopedics' v-bind:class="{ active: isActive }") 
+                      span Dentofacial Orthopedics
+                  li
+                    router-link( to='/incognito' v-bind:class="{ active: isActive }") 
+                      span Incognito™
+                  li
+                    router-link( to='/clarity-advanced-ceramic-brackets' v-bind:class="{ active: isActive }") 
+                      span Clarity™ Advanced Ceramic Brackets
+                  li
+                    router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }") 
+                      span AcceleDent® Aura
+                  li
+                    router-link( to='/damon-smile' v-bind:class="{ active: isActive }") 
+                      span Damon™ Smile 
+                  li
+                    router-link( to='/damon-clear' v-bind:class="{ active: isActive }") 
+                      span Damon™ Clear
+                  li
+                    router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
+                      span iTero® Element™
+                  li
+                    router-link( to='/tads' v-bind:class="{ active: isActive }") 
+                      span TADs  
+              li
+                router-link( to='/invisalign-treatment' v-bind:class="{ active: isActive }") 
+                  span Invisalign®             
+                ul.sub_menu
+                  li
+                    router-link( to='/invisalign-treatment' v-bind:class="{ active: isActive }") 
+                      span Invisalign® Treatment
+                  li
+                    router-link( to='/invisalign-treatment-for-teens' v-bind:class="{ active: isActive }") 
+                      span Invisalign® Treatment for Teens
+              li
+                router-link( to='/roslyn-office-location' v-bind:class="{ active: isActive }") 
+                  span Contact             
+                ul.sub_menu
+                  li
+                    router-link( to='/roslyn-office-location' v-bind:class="{ active: isActive }") 
+                      span Roslyn Office Location
+                  li
+                    router-link( to='/appointment-request' v-bind:class="{ active: isActive }") 
+                      span Appointment Request
+                  li
+                    router-link( to='/post-appointment-survey' v-bind:class="{ active: isActive }") 
+                      span Post-Appointment Survey  
+              li
+                router-link( to='/sitemap' v-bind:class="{ active: isActive }") 
+                  span Sitemap
+              li
+                router-link( to='/thank-you' v-bind:class="{ active: isActive }") 
+                  span Thank You                  
+        #content_right
+          .hide-stock(v-if='props.better_featured_image')
+            img(v-bind:src='props.better_featured_image.source_url')
+          
+    Footer()        
+      

@@ -1,0 +1,90 @@
+.pages-inner
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap
+      .container_manual.clearfix
+        #content_left
+          h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
+          .content_all
+            .testimonial_intro(v-if='props.acf.testimonial_intro_content' v-html:span='props.acf.testimonial_intro_content')
+            hr
+            .testomonial_list_outer(v-if='props.acf.testimonials_rating_list')
+              .testomonial_list(v-for='RatingList in props.acf.testimonials_rating_list')
+                .ratingstar_outer.clearfix
+                    .rating_star_left
+                      span(v-if='RatingList.stars== 1') 
+                        i.fa.fa-star
+                      span(v-if='RatingList.stars== 2')
+                        i.fa.fa-star
+                        i.fa.fa-star
+                      span(v-if='RatingList.stars== 3')
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                      span(v-if='RatingList.stars== 4')
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                      span(v-if='RatingList.stars== 5')
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star 
+                    .rating_star_right 
+                      span.date_star(v-if='RatingList.date' v-html='RatingList.date')
+                      span , 
+                      span.ratingname(v-if='RatingList.autor' v-html='RatingList.autor') 
+                      span  from 
+                      span.ratinglocation(v-if='RatingList.location' v-html='RatingList.location')
+                .rating_desc(v-if='RatingList.content' v-html='RatingList.content')
+            .testimonial_after
+              .ratingstar(v-if='props.acf.after_rating_star_content' v-html:span='props.acf.after_rating_star_content')
+              p(v-if='props.acf.reviews_number' v-html:span='props.acf.reviews_number')
+              .discolsure
+                .Disclosureinner(v-if='props.acf.powered_text' v-html:span='props.acf.powered_text')
+                .nr4ToolTip
+                  | Disclosure
+                  .nr4ToolTipText
+                    .content_tooltip(v-if='props.acf.disclosure_text' v-html:span='props.acf.disclosure_text')
+            hr
+            .ratingfiveonly(v-if='props.acf.star_rating_list_two')
+              .ratinglist2(v-for='RatingList2 in props.acf.star_rating_list_two')
+                 .ratingheading 
+                   span Rated 5 out of 5 Stars by 
+                   span(v-if='RatingList2.author' v-html='RatingList2.author')
+                 .rating2_content(v-if='RatingList2.description' v-html='RatingList2.description') 
+                 hr
+              
+                
+              
+        #content_right
+          .hide-stock(v-if='props.better_featured_image')
+            img(v-bind:src='props.better_featured_image.source_url')
+          .subnav_menu
+           h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')
+           ul
+            li
+              router-link( to='/office-visits' v-bind:class="{ active: isActive }") 
+                span Office Visits
+            li
+              router-link( to='/financial-information' v-bind:class="{ active: isActive }") 
+                span Financial Information
+            li
+              router-link( to='/testimonials' v-bind:class="{ active: isActive }") 
+                span Testimonials
+            li
+              router-link( to='/before-and-after' v-bind:class="{ active: isActive }") 
+                span Before and After 
+            li
+              router-link( to='/office-tour' v-bind:class="{ active: isActive }") 
+                span Office Tour
+            li
+              router-link( to='/patient-forms' v-bind:class="{ active: isActive }") 
+                span Patient Forms 
+          
+    Footer()        
+      

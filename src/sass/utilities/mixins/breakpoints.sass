@@ -1,0 +1,19 @@
+@mixin desktop-xl
+  @media screen and (min-width: #{$screen-lg} + 1px) and (max-width: #{$screen-xl})
+    @content
+
+@mixin desktop
+  @media screen and (min-width: #{$screen-md} + 1px) and (max-width: #{$screen-lg})
+    @content
+
+@mixin tablet
+  @media screen and (min-width: #{$screen-sm} + 1px) and (max-width: #{$screen-md})
+    @content
+
+@mixin phone-lg
+  @media screen and (min-width: #{$screen-xs} + 1px) and (max-width: #{$screen-sm})
+    @content
+
+@mixin phone
+  @media screen and (max-width: #{$screen-xs})
+    @content

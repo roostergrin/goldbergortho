@@ -1,0 +1,78 @@
+.form-contact.referfriend_form_outer
+  form.form-contact__form(@submit.prevent='validate', method='post')  
+  
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': experiencePractice }") Please describe your experience visiting our practice.
+      textarea.form-contact__textarea(name='experiencePractice', v-model='experiencePractice' :class="{ 'form-contact__input--error': errors.has('experiencePractice') }", type='textarea')
+      .form-contact__error-message(v-show="errors.has('experiencePractice')") Experience Practice is required.
+      
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': experienceWithDoctor }") Please describe your experience working with the doctor(s) and staff.
+      textarea.form-contact__textarea(name='experienceWithDoctor', v-model='experienceWithDoctor' :class="{ 'form-contact__input--error': errors.has('experienceWithDoctor') }", type='textarea')
+      .form-contact__error-message(v-show="errors.has('experienceWithDoctor')") Experience With Doctor is required.
+      
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': favoritePractice }") What was your favorite thing about being at our practice?
+      textarea.form-contact__textarea(name='favoritePractice', v-model='favoritePractice' :class="{ 'form-contact__input--error': errors.has('favoritePractice') }", type='textarea')
+      .form-contact__error-message(v-show="errors.has('favoritePractice')") Favorite Practice With Doctor is required.  
+      
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': experienceEnjoyable }") What areas could we improve upon to make your experience even more enjoyable?
+      textarea.form-contact__textarea(name='experienceEnjoyable', v-model='experienceEnjoyable' :class="{ 'form-contact__input--error': errors.has('experienceEnjoyable') }", type='textarea')
+      .form-contact__error-message(v-show="errors.has('experienceEnjoyable')") Experience Enjoyable With Doctor is required.
+      
+    .form-contact__group.radioo_box
+      label.form-contact__label(:class="{ 'form-contact__label--active': overallExperience }") How would you rate your overall experience?
+      label.radioclear
+        input.form-contact__input(name='overallExperience', v-model='overallExperience', checked='checked', v-validate="'required'", :class="{ 'form-contact__input--error': errors.has('overallExperience') }", type='radio' , value='Poor')
+        span Poor
+      label.radioclear    
+        input.form-contact__input(name='overallExperience', v-model='overallExperience', :class="{ 'form-contact__input--error': errors.has('overallExperience') }", type='radio' , value='Average')
+        span Average
+      label.radioclear    
+        input.form-contact__input(name='overallExperience', v-model='overallExperience', :class="{ 'form-contact__input--error': errors.has('overallExperience') }", type='radio' , value='Good')
+        span Good  
+      label.radioclear    
+        input.form-contact__input(name='overallExperience', v-model='overallExperience', :class="{ 'form-contact__input--error': errors.has('overallExperience') }", type='radio' , value='Great!')
+        span Great!          
+      .form-contact__error-message(v-show="errors.has('overallExperience')") Please select your experience.  
+      
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': additionalComments }") Please provide any additional comments/suggestions.
+      textarea.form-contact__textarea(name='additionalComments', v-model='additionalComments' :class="{ 'form-contact__input--error': errors.has('additionalComments') }", type='textarea')
+      .form-contact__error-message(v-show="errors.has('additionalComments')") Additional Comments is required. 
+      
+    hr
+    legend.refrerclass Contact Information:
+
+    .form-contact__group
+      label.form-contact__label(:class="{ 'form-contact__label--active': memberExperience }") Would you like a member of our team to contact you to further discuss your experience?
+        span.red_warn *       
+      select.form-contact__input(name='memberExperience', v-model='memberExperience', v-validate="'required'", :class="{ 'input': true, 'form-contact__input--error': errors.has('memberExperience') }", placeholder='Select An Option')
+          option(value='') Select An Option
+          option(value='Yes') Yes
+          option(value='No') No thank you; see you at my next appointment.
+      .form-contact__error-message(v-show="errors.has('memberExperience')")  Please select an option 
+      
+      legend.drop(v-if="memberExperience === 'Yes'")
+        span Please provide your name and email address:     
+      
+    .form-contact__group(v-if="memberExperience === 'Yes'")
+      label.form-contact__label(:class="{ 'form-contact__label--active': yourName }") 
+        b Your Name   
+      input.form-contact__input(name='yourName', v-model='yourName', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('yourName') }", type='text')
+      span.sub_names_form First and Last
+      .form-contact__error-message(v-show="errors.has('yourName')") Your name is required.
+      
+    .form-contact__group(v-if="memberExperience === 'Yes'")
+      label.form-contact__label(:class="{ 'form-contact__label--active': email }") 
+        b Your Email Address  
+      input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') }")
+      .form-contact__error-message(v-show="errors.has('email')")  Please Input a Valid Email   
+                    
+    .form-contact__group.form-contact__group--button
+      .form-contact__submit-button(:class="{ 'form-contact__submit-button--success': formSuccess }" @click='validate')
+        .form-contact__submit-overlay(:class="{ 'form-contact__submit-overlay--showing': formSubmitted  && !formSuccess }")
+        span.form-contact__submit-label(:class="{ 'form-contact__submit-label--hidden': formSuccess }") Submit Feedback
+        .form-contact__submit-success(:class="{ 'form-contact__submit-success--showing': formSuccess }")
+        span.form-contact__submit-check(:class="{ 'form-contact__submit-check--showing': formSuccess }")

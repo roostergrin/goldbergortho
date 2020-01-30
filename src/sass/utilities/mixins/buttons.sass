@@ -1,0 +1,295 @@
+// --------------------------------------------------------
+// button options
+// TODO: remove any notes and clean up notes should be written like this NOTE: lorem ipsum
+// TODO: add animations to styleguide page and remove website listings
+// TODO: any notes for svgs should be added to styleguide directions not listed in comments
+// --------------------------------------------------------
+
+@mixin hero-button($max-width, $height, $color, $bg-color, $color-hover)
+  display: block
+  position: relative
+  transition: color .25s ease-in-out
+  border: 1px solid transparent
+  background: $bg-color
+  cursor: pointer
+  padding: 12px 0
+  width: 100%
+  max-width: $max-width
+  height: $height
+  overflow: hidden
+  text-align: center
+  color: $color
+
+  span
+    position: relative
+    z-index: 2
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: bold
+
+  &:before
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate3d(-$max-width, -50%, 0)
+    transition: transform .3s cubic-bezier(.39, .575, .28, .995)
+    z-index: 1
+    background-color: $color-hover
+    width: 100%
+    height: 102%
+    content: ''
+
+  &:hover
+    color: $bg-color
+
+    &:before
+      transform: translate3d(0, -50%, 0)
+
+@mixin button-outline-draw($width, $height, $color, $padding)
+  // heights and width are pixel or rem values
+  // You must create an svg for this like:
+  // div
+  //  | content
+  //  svg
+  //    rect(x='0' y='0' width='100%' height='100%')
+  // used on Spielberg Ortho
+  $hoverline: calc(#{$width} / 2)
+  $hoveroffset: calc(#{$width} + #{$height} + calc(#{$width} / 4))
+  position: relative
+  cursor: pointer
+  padding: $padding
+  width: #{$width}
+  height: #{$height}
+  text-align: center
+  text-transform: uppercase
+  color: #{$color}
+  svg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  rect
+    transition: all 1s ease-in-out
+    fill: none
+    stroke-width: 3px
+    stroke: #{$color}
+    stroke-dasharray: 1000, 0
+  &:hover
+    rect
+      stroke-dasharray: $hoverline, $hoveroffset
+      stroke-dashoffset: $hoverline
+
+@mixin button-background-draw($width, $height, $color, $background, $padding)
+  // heights and width are pixel or rem values
+  // You must create an svg for this like:
+  // div
+  //  | content
+  //  svg
+  //    rect(x='0' y='0' width='100%' height='100%')
+  // used on Spielberg Ortho
+  $hoverline: calc(#{$width} / 2)
+  $hoveroffset: calc(#{$width} + #{$height} + calc(#{$width} / 4))
+  position: relative
+  transition: all 1s ease-in-out
+  border-radius: 3px
+  background: $background
+  cursor: pointer
+  padding: $padding
+  width: #{$width}
+  height: #{$height}
+  text-align: center
+  text-transform: uppercase
+  color: #{$color}
+  svg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  rect
+    transition: all .75s ease-in-out
+    fill: none
+    stroke-width: 3px
+    stroke-dasharray: 1000, 0
+  &:hover
+    background: transparent
+    rect
+      stroke: $color
+      stroke-dasharray: $hoverline, $hoveroffset
+      stroke-dashoffset: $hoverline
+
+@mixin button-background-draw-2($width, $height, $color, $color2, $background, $padding)
+  // heights and width are pixel or rem values
+  // You must create an svg for this like:
+  // div
+  //  | content
+  //  svg
+  //    rect(x='0' y='0' width='100%' height='100%')
+  // Spielberg Ortho
+  $hoverline: calc(#{$width} / 2)
+  $hoveroffset: calc(#{$width} + #{$height} + calc(#{$width} / 4))
+  position: relative
+  transition: all .75s ease-in-out
+  border-radius: 3px
+  background: $background
+  cursor: pointer
+  padding: $padding
+  width: #{$width}
+  height: #{$height}
+  text-align: center
+  text-transform: uppercase
+  color: #{$color}
+  svg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  rect
+    transition: all 1s ease-in-out
+    fill: none
+    stroke-width: 3px
+    stroke-dasharray: 1000, 0
+  &:hover
+    background: transparent
+    color: $color2
+    rect
+      stroke: $color2
+      stroke-dasharray: $hoverline, $hoveroffset
+      stroke-dashoffset: $hoverline
+
+@mixin button-slide-hover($background, $padding, $width, $color, $color-bg, $color-bg-2, $height, $slant-height)
+  // Razi Ortho
+  position: relative
+  background: $color-bg
+  cursor: pointer
+  padding: $padding
+  width: 100%
+  max-width: $width
+  height: auto
+  overflow: hidden
+  color: $color
+
+  &:before
+    position: absolute
+    top: 0
+    right: calc($slant-height * -1)
+    bottom: 0
+    left: 0
+    transform: translateX(-100%)
+    transition: all .4s ease-in-out
+    z-index: 1
+    border-right: $slant-height solid transparent
+    border-bottom: $height solid $color-bg-2
+    content: ''
+
+  span
+    position: relative
+    transition: all .35s ease-in-out
+    z-index: 2
+
+  &:hover
+    transition: all .35s ease
+
+    span
+      transition: all .45s ease-in-out
+      letter-spacing: .3px
+      transition-timing-function: cubic-bezier(.51, -.105, .43, 2)
+
+    &:before
+      transform: translateX(0)
+
+@mixin button-position-aware($color, $color-2, $width, $padding, $padding-sm, $border-width)
+  //  used in conjunction with getPosition and following pug
+  //  maybe make this a component
+  //  .button-position-aware(@click='openApptModal', @mouseenter='mouseEnter' @mouseleave='mouseEnter')
+        span.button-position-aware--background(:style='styleObject')
+        span.button-position-aware--text {{data.button}}
+  position: relative
+  z-index: 2
+  border: $border-width solid $color
+  cursor: pointer
+  padding: $padding
+  width: 100%
+  max-width: $width
+  overflow: hidden
+
+  @media (max-width: $screen-sm)
+    transition: all .45s ease-in-out
+    padding: $padding-sm
+    color: $color
+
+  &:hover
+    .button-position-aware--text
+      color: $color-2
+
+    span
+      width: 225%
+      height: calc($width * 2.25)
+
+  span
+    display: block
+    position: absolute
+    transform: translate(-50%, -50%)
+    transition: height .45s ease-in-out, width .45s ease-in-out
+    z-index: 1
+    border-radius: 50%
+    background-color: $color
+    width: 0
+    height: 0
+
+@mixin button-circle-phil($width, $color, $color2, $duration, $border-width, $border-color, $border-radius, $padding, $svg-size, $after-top, $after-left)
+  display: block
+  position: relative
+  transition: all $duration ease-in-out
+  border: solid $border-color $border-width
+  border-radius: $border-radius
+  cursor: pointer
+  padding: $padding
+  width: 100%
+  max-width: $width
+  overflow: hidden
+  text-align: center
+  color: $color
+
+  span
+    display: inline-block
+    transition: color $duration ease-in-out
+
+  &-icon
+    display: inline-block
+    transition: all $duration ease-in-out
+    margin-left: 20px
+    width: $svg-size
+    height: $svg-size
+    vertical-align: middle
+
+    svg
+      fill: $border-color
+
+  &:after
+    position: absolute
+    top: $after-top
+    left: $after-left
+    transform: scale(.01)
+    transition: all $duration ease-in-out
+    z-index: -1
+    border-radius: 50%
+    background: $border-color
+    width: calc($width * 2)
+    height: calc($width * 2)
+    content: ''
+    transform-origin: center center
+
+  &:hover
+    transition: all $duration ease-in-out
+    box-shadow: 0 2px 4px 0 rgba($black, .33)
+
+    span
+      transition: color $duration ease-in-out
+      color: $color2
+
+    &:after
+      transform: scale(1)
+      transition: all $duration ease-in-out

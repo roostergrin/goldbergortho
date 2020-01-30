@@ -1,0 +1,131 @@
+// --------------------------------------------------------
+// imports
+// --------------------------------------------------------
+@import './mixins/responsive-text.sass'
+@import './mixins/breakpoints.sass'
+@import './mixins/buttons.sass'
+@import './mixins/hamburgers.sass'
+
+// --------------------------------------------------------
+// spinner options
+// TODO: add to styleguide
+// TODO: remove comments
+// --------------------------------------------------------
+
+@mixin spinner($color)
+  position: absolute
+  top: 0
+  right: 50%
+  bottom: 0
+  left: 47.255%
+  z-index: 9
+  border-radius: 50%
+  width: 100%
+  height: 100%
+
+  &:before
+    display: block
+    position: absolute
+    top: -2px
+    left: -2px
+    animation: spin 1.4s linear infinite
+    z-index: 9
+    border: 2px solid transparent
+    border-bottom: 2px solid $color
+    border-radius: 50%
+    width: 33px
+    height: 33px
+    content: ''
+
+
+  &:after
+    display: block
+    position: absolute
+    top: 2px
+    left: 2px
+    animation: spin 1s linear infinite
+    z-index: 9
+    border: 2px solid transparent
+    border-top: 2px solid lighten($color, 20)
+    border-radius: 50%
+    width: 25px
+    height: 25px
+    content: ''
+
+    @keyframes spin
+      0%
+        transform: rotate(0deg)
+      100%
+        transform: rotate(360deg)
+
+// --------------------------------------------------------
+// iterator options
+// TODO: add to styleguide
+// TODO: remove comments
+// TODO: this name of iterator isnt helpful on functionality for users support cant come in and know what the utility is with that name
+// --------------------------------------------------------
+
+@mixin link-fade($amount, $animation, $duration, $timing, $delay)
+  // Spielberg Ortho
+  animation: $animation $duration ease forwards
+  animation-delay: $delay
+  opacity: 0
+
+  @for $i from 1 through $amount
+    &:nth-child(#{$i})
+      animation-delay: (($i - 1) * $timing)
+
+// --------------------------------------------------------
+// fade options
+// TODO: add to styleguide
+// --------------------------------------------------------
+
+@mixin fade-in($duration)
+  opacity: 0
+  &.fade
+    animation: fade-in $duration ease-in-out forwards
+
+@mixin fade-out($duration)
+  opacity: 0
+  &.fade
+    animation: fade-out $duration ease-in-out forwards
+
+@mixin fade-in-up($duration)
+  opacity: 0
+  &.fade
+    animation: fade-in-up $duration ease-in-out forwards
+
+@mixin fade-out-up($duration)
+  opacity: 0
+  &.fade
+    animation: fade-out-up $duration ease-in-out forwards
+
+@mixin fade-in-down($duration)
+  opacity: 0
+  &.fade
+    animation: fade-in-down $duration ease-in-out forwards
+
+@mixin fade-out-down($duration)
+  opacity: 0
+  &.fade
+    animation: fade-out-down $duration ease-in-out forwards
+
+@mixin fade-right($duration)
+  opacity: 0
+  &.fade
+    animation: fade-in-left $duration ease-in-out forwards
+
+@mixin fade-out-right($duration)
+  opacity: 0
+  &.fade
+    animation: fade-out-right $duration ease-in-out forwards
+
+@mixin fade-in-left($duration)
+  opacity: 0
+  &.fade
+    animation: fade-in-left $duration ease-in-out forwards
+
+@mixin fade-out-left($duration)
+  opacity: 0
+  &.fade
+    animation: fade-out-left $duration ease-in-out forwards

@@ -1,0 +1,38 @@
+.pages-inner
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap
+      .container_manual.clearfix
+        #content_left
+          h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
+          .content_all
+            .meet_team_intro(v-if='props.acf.meet_team_section_intro' v-html:span='props.acf.meet_team_section_intro')
+            hr
+            .meet_team_list_outer(v-if='props.acf.meet_team_list')
+              .meet_team_list_outer(v-for='TeamList in props.acf.meet_team_list')
+                h2(v-if='TeamList.name' v-html:span='TeamList.name')
+                h3(v-if='TeamList.designation' v-html:span='TeamList.designation')
+                .meet_content(v-if='TeamList.content' v-html:span='TeamList.content')
+        #content_right
+          .hide-stock(v-if='props.better_featured_image')
+            img(v-bind:src='props.better_featured_image.source_url')
+          .subnav_menu
+           h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')
+           ul
+            li
+              router-link( to='/meet-dr-ira-goldberg' v-bind:class="{ active: isActive }") 
+                span Meet Dr. Ira Goldberg
+            li
+              router-link( to='/meet-the-team' v-bind:class="{ active: isActive }") 
+                span Meet the Team 
+            li
+              router-link( to='/abo-certification' v-bind:class="{ active: isActive }") 
+                span ABO Certification
+            li
+              router-link( to='/what-sets-us-apart' v-bind:class="{ active: isActive }") 
+                span What Sets Us Apart 
+          
+    Footer()        
+      

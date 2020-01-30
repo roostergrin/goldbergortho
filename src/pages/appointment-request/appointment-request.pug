@@ -1,0 +1,31 @@
+.pages-inner
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap
+      .container_manual.clearfix
+        #content_left
+          h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
+          .content_all
+            .before_form_content(v-if='props.content.rendered' v-html:span='props.content.rendered')
+            .appoint_form
+              AppointmentRequestForm()
+        #content_right
+          .hide-stock(v-if='props.better_featured_image')
+            img(v-bind:src='props.better_featured_image.source_url')
+          .subnav_menu
+           h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')
+           ul
+              li
+                router-link( to='/roslyn-office-location' v-bind:class="{ active: isActive }") 
+                  span Roslyn Office Location
+              li
+                router-link( to='/appointment-request' v-bind:class="{ active: isActive }") 
+                  span Appointment Request
+              li
+                router-link( to='/post-appointment-survey' v-bind:class="{ active: isActive }") 
+                  span Post-Appointment Survey 
+          
+    Footer()        
+      

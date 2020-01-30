@@ -1,0 +1,335 @@
+// --------------------------------------------------------
+// columns
+// --------------------------------------------------------
+$half: calc($columns/2)
+
+@for $i from 0 through $columns
+  .col-#{$i}
+    position: relative
+    float: left
+    padding: 0 calc(#{$gutter}/2)
+    width: calc(#{$i} / #{$columns} * 100%)
+
+    .container-large &
+      float: left
+      margin: 0 calc(#{$gutter} / 2)
+      width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+
+    @media screen and (max-width: $screen-md)
+      width: 100%
+
+    @if $i <= $columns / 2
+      @media screen and (max-width: $screen-md)
+        width: calc((1/2) * 100%)
+
+      @media screen and (max-width: $screen-sm)
+        width: 100%
+
+      @media screen and (max-width: $screen-xs)
+        width: 100%
+
+    &--flex
+      display: inline-block
+      flex: 0 0 auto
+      flex-basis: calc((#{$i}/#{$columns}) * 100%)
+      flex-grow: 0
+      padding: 0 calc(#{$gutter}/2)
+      width: calc((#{$i}/#{$columns}) * 100%)
+      box-sizing: border-box
+
+      @media screen and (max-width: $screen-md)
+        flex-basis: 100%
+
+      @if $i <= $columns / 2
+        @media screen and (max-width: $screen-md)
+          flex-basis: calc((1/2) * 100%)
+
+        @media screen and (max-width: $screen-sm)
+          flex-basis: 100%
+
+        @media screen and (max-width: $screen-xs)
+          flex-basis: 100%
+
+    &--offset
+      margin-left: calc((#{$i}/#{$columns}) * 100%)
+
+      @media screen and (max-width: $screen-md)
+        margin-left: calc((1/4) * 100%)
+
+      @media screen and (max-width: $screen-sm)
+        margin-left: 0
+
+    &--grid
+        float: left
+        margin: 0 calc(#{$gutter} / 2)
+        width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+
+        @supports (display: grid)
+          margin: 0
+          width: auto
+          grid-column-end: span #{$i}
+
+        .container-large &
+          float: left
+          margin: 0 calc(#{$gutter} / 2)
+          width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+
+          @supports (display: grid)
+            margin: 0
+            width: auto
+            grid-column-end: span #{$i}
+
+
+// --------------------------------------------------------
+// grid classes
+// NOTE: responsive cascades to largest screen size can't be done with max-widths
+// TODO(luke): this statement is confusing
+// TODO: Re-organize to new grid architecture
+// --------------------------------------------------------
+
+// @for $i from 0 through $columns
+//   .xs-#{$i}
+//     @media screen and (min-width: $screen-xs)
+//       float: left
+//       margin: 0 calc(#{$gutter} / 2)
+//       width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//       @supports (display: grid)
+//         margin: 0
+//         width: auto
+//         grid-column-end: span #{$i}
+//
+//       .container-large &
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+// @for $i from 0 through $columns
+//   .sm-#{$i}
+//     @media screen and (min-width: $screen-sm)
+//       float: left
+//       margin: 0 calc(#{$gutter} / 2)
+//       width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//       @supports (display: grid)
+//         margin: 0
+//         width: auto
+//         grid-column-end: span #{$i}
+//
+//       .container-large &
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+// @for $i from 0 through $columns
+//   .md-#{$i}
+//     @media screen and (min-width: $screen-md)
+//       float: left
+//       margin: 0 calc(#{$gutter} / 2)
+//       width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//       @supports (display: grid)
+//         margin: 0
+//         width: auto
+//         grid-column-end: span #{$i}
+//
+//       .container-large &
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+// @for $i from 0 through $columns
+//   .lg-#{$i}
+//     @media screen and (min-width: $screen-lg)
+//       float: left
+//       margin: 0 calc(#{$gutter} / 2)
+//       width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//       @supports (display: grid)
+//         margin: 0
+//         width: auto
+//         grid-column-end: span #{$i}
+//
+//       .container-large &
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+// @for $i from 0 through $columns
+//   .xl-#{$i}
+//     @media screen and (min-width: $screen-xl)
+//       float: left
+//       margin: 0 calc(#{$gutter} / 2)
+//       width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//       @supports (display: grid)
+//         margin: 0
+//         width: auto
+//         grid-column-end: span #{$i}
+//
+//       .container-large &
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+// // --------------------------------------------------------
+// // offset classes
+// // NOTE: responsive cascades to largest screen size can't be done with max-widths
+// // TODO(luke): this statement is confusing
+// // --------------------------------------------------------
+//
+// @for $i from 0 through $columns
+//   .xs-offset-#{$i}
+//     @media screen and (min-width: $screen-xs)
+//       display: none
+//
+//       @if ($i > 0)
+//         display: block
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+//         .container-large &
+//           float: left
+//           margin: 0 calc(#{$gutter} / 2)
+//           width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//           @supports (display: grid)
+//             margin: 0
+//             width: auto
+//             grid-column-end: span #{$i}
+//
+// @for $i from 0 through $columns
+//   .sm-offset-#{$i}
+//     @media screen and (min-width: $screen-sm)
+//       display: none
+//
+//       @if ($i > 0)
+//         display: block
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+//         .container-large &
+//           float: left
+//           margin: 0 calc(#{$gutter} / 2)
+//           width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//           @supports (display: grid)
+//             margin: 0
+//             width: auto
+//             grid-column-end: span #{$i}
+//
+// @for $i from 0 through $columns
+//   .md-offset-#{$i}
+//     @media screen and (min-width: $screen-md)
+//       display: none
+//
+//       @if ($i > 0)
+//         display: block
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+//         .container-large &
+//           float: left
+//           margin: 0 calc(#{$gutter} / 2)
+//           width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//           @supports (display: grid)
+//             margin: 0
+//             width: auto
+//             grid-column-end: span #{$i}
+//
+// @for $i from 0 through $columns
+//   .lg-offset-#{$i}
+//     @media screen and (min-width: $screen-lg)
+//       display: none
+//
+//       @if ($i > 0)
+//         display: block
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+//         .container-large &
+//           float: left
+//           margin: 0 calc(#{$gutter} / 2)
+//           width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//           @supports (display: grid)
+//             margin: 0
+//             width: auto
+//             grid-column-end: span #{$i}
+//
+// @for $i from 0 through $columns
+//   .xl-offset-#{$i}
+//     @media screen and (min-width: $screen-xl)
+//       display: none
+//
+//       @if ($i > 0)
+//         display: block
+//         float: left
+//         margin: 0 calc(#{$gutter} / 2)
+//         width: calc(#{$i} / #{$columns} * 100% - #{$gutter})
+//
+//         @supports (display: grid)
+//           margin: 0
+//           width: auto
+//           grid-column-end: span #{$i}
+//
+//         .container-large &
+//           float: left
+//           margin: 0 calc(#{$gutter} / 2)
+//           width: calc(#{$i} / #{$columns-large} * 100% - #{$gutter})
+//
+//           @supports (display: grid)
+//             margin: 0
+//             width: auto
+//             grid-column-end: span #{$i}
+//
