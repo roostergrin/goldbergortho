@@ -14,11 +14,8 @@ import PatientForms from '@/pages/patient-forms/patient-forms'
 import AboutOrthodontics from '@/pages/about-orthodontics/about-orthodontics'
 import ForAllAges from '@/pages/for-all-ages/for-all-ages'
 import TwoPhaseTreatment from '@/pages/two-phase-treatment/two-phase-treatment'
-import TypesOfBraces from '@/pages/types-of-braces/types-of-braces'
 import PalatalExpander from '@/pages/palatal-expander/palatal-expander'
 import BrushingAndFlossing from '@/pages/brushing-and-flossing/brushing-and-flossing'
-import EmergencyCare from '@/pages/emergency-care/emergency-care'
-import CommonOrthodonticIssues from '@/pages/common-orthodontic-issues/common-orthodontic-issues'
 import SurgicalOrthodontics from '@/pages/surgical-orthodontics/surgical-orthodontics'
 import DentofacialOrthopedics from '@/pages/dentofacial-orthopedics/dentofacial-orthopedics'
 import Incognito from '@/pages/incognito/incognito'
@@ -128,12 +125,6 @@ const router = new VueRouter({
       component: TwoPhaseTreatment
     },
     {
-      path: '/types-of-braces',
-      name: 'types-of-braces',
-      navigation: true,
-      component: TypesOfBraces
-    },
-    {
       path: '/palatal-expander',
       name: 'palatal-expander',
       navigation: true,
@@ -144,18 +135,6 @@ const router = new VueRouter({
       name: 'brushing-and-flossing',
       navigation: true,
       component: BrushingAndFlossing
-    },
-    {
-      path: '/emergency-care',
-      name: 'emergency-care',
-      navigation: true,
-      component: EmergencyCare
-    },
-    {
-      path: '/common-orthodontic-issues',
-      name: 'common-orthodontic-issues',
-      navigation: true,
-      component: CommonOrthodonticIssues
     },
     {
       path: '/surgical-orthodontics',

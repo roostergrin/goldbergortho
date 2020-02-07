@@ -15,9 +15,6 @@
            h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')
            ul
               li
-                router-link( to='/common-orthodontic-issues' v-bind:class="{ active: isActive }") 
-                  span Common Orthodontic Issues
-              li
                 router-link( to='/surgical-orthodontics' v-bind:class="{ active: isActive }") 
                   span Surgical Orthodontics
               li
