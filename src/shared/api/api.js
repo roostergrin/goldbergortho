@@ -1,4 +1,4 @@
-const route = '//goldbergortho.rgwplogin.com/wp-json'
+const route = '//goldbergortho.com/wp-json'
 
 const api = () => {
   try {
