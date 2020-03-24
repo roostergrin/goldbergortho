@@ -55,6 +55,10 @@
           x.style.display = "none";
 			}
 		}
-    </script> 
+  </script>
+  <script type="text/javascript" async defer src="https://app.smilesnap.com/app/GSpGRfKWmKWqqwAAqSw2y5Gu/loader.js"></script>
+  <a href="#" class="smilesnap-button">Free Online Consultation!</a>
+
+  <button class="btn btn-lg btn-secondary smilesnap-button">Start Your Online Consultation</button>
 </body>
 </html>
