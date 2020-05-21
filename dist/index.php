@@ -3,12 +3,12 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://wowjs.uk/css/libs/animate.css">
-    <link rel='stylesheet' id='sb-font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />    
+    <link rel='stylesheet' id='sb-font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
     <?php wp_head(); ?>
 </head>
 <body>
@@ -57,8 +57,5 @@
 		}
   </script>
   <script type="text/javascript" async defer src="https://app.smilesnap.com/app/GSpGRfKWmKWqqwAAqSw2y5Gu/loader.js"></script>
-  <a href="#" class="smilesnap-button">Free Online Consultation!</a>
-
-  <button class="btn btn-lg btn-secondary smilesnap-button">Start Your Online Consultation</button>
 </body>
 </html>
