@@ -215,7 +215,7 @@ const router = new VueRouter({
       component: AppointmentRequest
     },
     {
-      path: '/post-appointment-survey',
+      path: 'https://pplpractice-reviews.com/GolRoslyn',
       name: 'post-appointment-survey',
       navigation: true,
       component: PostAppointmentSurvey
