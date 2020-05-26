@@ -140,7 +140,7 @@ a
   @media screen and (max-width:450px)
     width: 100%
     top: 0
-    margin-left: 0 
+    margin-left: 0
 
 
 .hd-right .appt-req::before
@@ -180,7 +180,7 @@ a
 .hd-right ul li
   list-style: none
 
-.hd-right ul li a
+.hd-right ul li a, .hd-right ul li button
   display: inline-block
   padding: 0 7px
   height: 51px
@@ -196,7 +196,7 @@ a
   box-shadow: 0 0 1px rgba(0, 0, 0, 0)
   position: relative
 
-.hd-right ul li a::before
+.hd-right ul li a::before, .hd-right ul li button::before
   content: ""
   position: absolute
   z-index: -1
@@ -217,7 +217,7 @@ a
   -webkit-transition-timing-function: ease-out
   border-radius: 0 0 5px 5px
 
-.hd-right ul li a:hover::before
+.hd-right ul li a:hover::before, .hd-right ul li button:hover::before
   transform: scaleY(1)
   -webkit-transform: scaleY(1)
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
@@ -1514,7 +1514,7 @@ p:empty
       line-height: 35px
       margin-left: 0
 
-    .hd-right ul li a
+    .hd-right ul li a, .hd-right ul li button
       display: block
       padding: 0 4px
       height: auto
@@ -1624,7 +1624,7 @@ p:empty
     .hd-right .appt-req::before
       background: #997e0c
 
-    .hd-right ul li a::before
+    .hd-right ul li a::before, .hd-right ul li button::before
       background: #002964
 
     .client_logo_section a:nth-child(1)::after
@@ -1800,7 +1800,7 @@ p:empty
       line-height: 35px
       margin-left: 0
 
-    .hd-right ul li a
+    .hd-right ul li a, .hd-right ul li button
       display: block
       padding: 0 4px
       height: auto
@@ -1921,7 +1921,7 @@ p:empty
     .hd-right .appt-req::before
       background: #997e0c
 
-    .hd-right ul li a::before
+    .hd-right ul li a::before, .hd-right ul li button::before
       background: #002964
 
     .rating_star_right
