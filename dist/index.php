@@ -56,6 +56,16 @@
 			}
 		}
   </script>
-  <script type="text/javascript" async defer src="https://app.smilesnap.com/app/GSpGRfKWmKWqqwAAqSw2y5Gu/loader.js"></script>
+  <!-- <script type="text/javascript" async defer src="https://app.smilesnap.com/app/GSpGRfKWmKWqqwAAqSw2y5Gu/loader.js"></script> -->
+  <script type="text/javascript">
+    window.__smilesnap = window.__smilesnap || [];
+    window.__smilesnap.cid = 'GSpGRfKWmKWqqwAAqSw2y5Gu';
+    (function() {
+    var ss = document.createElement('script'); ss.type = 'text/javascript'; ss.async = true;
+    ss.src = 'https://app-cdn.smilesnap.com/js/loader.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ss, s);
+    })();
+  </script>
 </body>
 </html>
