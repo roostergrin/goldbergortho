@@ -31,6 +31,7 @@ import RoslynOfficeLocation from '@/pages/roslyn-office-location/roslyn-office-l
 import AppointmentRequest from '@/pages/appointment-request/appointment-request'
 import PostAppointmentSurvey from '@/pages/post-appointment-survey/post-appointment-survey'
 import Sitemap from '@/pages/sitemap/sitemap'
+import Smilesnap from '@/pages/smilesnap/smilesnap'
 import ThankYou from '@/pages/thank-you/thank-you'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
@@ -219,6 +220,12 @@ const router = new VueRouter({
       name: 'post-appointment-survey',
       navigation: true,
       component: PostAppointmentSurvey
+    },
+    {
+      path: '/smilesnap',
+      name: 'smilesnap',
+      navigation: false,
+      component: Smilesnap
     },
     {
       path: '/sitemap',
