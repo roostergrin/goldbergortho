@@ -60,6 +60,7 @@
   <script type="text/javascript">
     window.__smilesnap = window.__smilesnap || [];
     window.__smilesnap.cid = 'GSpGRfKWmKWqqwAAqSw2y5Gu';
+    window.__smilesnap.fullscreenSelector = '#smilesnap-expanded-container';
     (function() {
     var ss = document.createElement('script'); ss.type = 'text/javascript'; ss.async = true;
     ss.src = 'https://app-cdn.smilesnap.com/js/loader.js';
