@@ -12,7 +12,7 @@
             span(v-if='props.acf.forms_text' v-html:span='props.acf.forms_text')
           router-link.appt-req(v-if='props.acf.complimentary_consultation_url' v-bind:to='props.acf.complimentary_consultation_url')  
             span(v-if='props.acf.complimentary_consultation_text' v-html:span='props.acf.complimentary_consultation_text')
-        a#patient-login.patient-login.external(v-if='props.acf.patient_login_url', :href="props.acf.patient_login_url") 
+        a#patient-login.patient-login.external(v-if='props.acf.patient_login_url', :href='props.acf.patient_login_url') 
           span(v-if='props.acf.patient_login_text' v-html:span='props.acf.patient_login_text')
         .social-icons(v-if='props.acf.social_bar_list')
           a.external(v-bind:href='SocialList.url' v-for='SocialList in props.acf.social_bar_list' target='_blank')
