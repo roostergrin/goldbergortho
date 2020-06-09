@@ -66,6 +66,10 @@ body
   float: right
   text-align: right
 
+.util-nav
+  position: relative
+  top: 3px
+
 .hd-locations, .util-nav
   display: inline-block
 
@@ -121,7 +125,7 @@ a
 #patient-login
   display: inline-block
   padding: 0 7px
-  height: 48px
+  height: 51px
   line-height: 51px
   border-radius: 0 0 5px 5px
   text-align: center
@@ -134,7 +138,7 @@ a
   position: relative
   transform: perspective(1px) translateZ(0)
   -webkit-transform: perspective(1px) translateZ(0)
-  top: 0px
+  top: -3px
   margin-left: 2px
 
   @media screen and (max-width:450px)
@@ -2023,3 +2027,15 @@ p:empty
     padding-right: 0
   #smilesnap-title
     padding-left: 25px
+
+.block-covid-banner
+  position: relative
+  top: 0
+  width: 100%
+  background-color: red
+  @media screen and (max-width:450px)
+    top: 32px
+
+  &__container
+    text-align: center
+    color: white

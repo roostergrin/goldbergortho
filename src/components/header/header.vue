@@ -2,6 +2,7 @@
 
 <script>
 import Icon from 'components/icon/icon'
+import COVIDBanner from 'components/block/block-covid-banner/block-covid-banner'
 
 export default {
   computed: {
@@ -10,7 +11,8 @@ export default {
     }
   },
   components: {
-    Icon
+    Icon,
+    COVIDBanner
   }
 }
 </script>
