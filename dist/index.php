@@ -61,7 +61,8 @@
     window.__smilesnap = window.__smilesnap || [];
     window.__smilesnap.cid = 'GSpGRfKWmKWqqwAAqSw2y5Gu';
     window.__smilesnap.fullscreenSelector = '#smilesnap-expanded-container';
-    window.__smilesnap.forceOpen = true;
+    window.__smilesnap.forceOpen = false;
+	window.__smilesnap.suppressButton = true;
 
     (function() {
     var ss = document.createElement('script'); ss.type = 'text/javascript'; ss.async = true;
