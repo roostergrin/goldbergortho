@@ -1,0 +1,25 @@
+.pages-inner.page-blog
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap.content_full
+      .container_manual.clearfix
+        #content_left
+          h1.blogsingletitle(v-if='props.title.rendered' v-html:span='props.title.rendered')
+          .content_all
+            .blog_bar_outer.clearfix
+              h3.blog_date_bar
+                span.date(v-html='"<span>"+ props.date.slice(8,10) +"</span>/<span>"+ props.date.slice(5,7) +"</span>/<span>"+ props.date.slice(0,4)+"</span>"') 
+              .blog_img(v-if='props.better_featured_image')
+                img(v-bind:src='props.better_featured_image.source_url')     
+              .blog_excrept_content(v-if="props.content" v-html='props.content.rendered') 
+              .post_category_outer(v-if='props.pure_taxonomies.categories')
+                span.post_category
+                  | 
+                  b Posted In: 
+                  router-link(v-for='(blogCat, i) in props.pure_taxonomies.categories', :key='i' v-bind:to='"/category/"+blogCat.slug') 
+                    span(v-html='blogCat.name')                            
+          
+    Footer()        
+      

@@ -1,16 +1,29 @@
-import { GET_PAGES, GET_APP, VIEW_NAV, VIEW_BODY, VIEW_TYPES, VIEW_SHOWMODAL, VIEW_MODALCONTENT } from './mutation-types.js'
+import { GET_PAGES, GET_APP, VIEW_NAV, GET_BLOG, SET_BLOG, GET_CURRENT_BLOG, GET_CATEGORY, VIEW_BODY, VIEW_TYPES, VIEW_SHOWMODAL, VIEW_MODALCONTENT } from './mutation-types.js'
 
 const mutations = {
   [GET_PAGES] (state, data) {
     state.pages = data
     state.loading = false
   },
-  // [GET_BLOG] (state, data) {
-  //   state.blog = data
-  //   state.blog.current_page = {}
-  //   state.blog.current_page.number = 1
-  //   state.loading = false
-  // },
+  [GET_BLOG] (state, data) {
+    state.blog = data
+    state.blog.current_page = {}
+    state.blog.current_page.number = 1
+  },
+  [SET_BLOG] (state, data) {
+    state.sortedBlog = data
+  },
+  [GET_CURRENT_BLOG] (state, data) {
+    const currentPost = data
+    for (let i = 0; i < state.blog.data.length; i++) {
+      if (state.blog.data[i].slug === currentPost) {
+        state.currentBlog = state.blog.data[i]
+      }
+    }
+  },
+  [GET_CATEGORY] (state, data) {
+    state.categoryLists = data
+  },
   [GET_APP] (state, data) {
     state.app = data
   },

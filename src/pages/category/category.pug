@@ -1,0 +1,33 @@
+.pages-inner.page-blog
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap.content_full
+      .container_manual.clearfix
+        #content_left
+          h1.blog-title Category: 
+            span {{catname}}          
+          .content_all
+            .blog_bar_outer.clearfix
+              .blog_bar_lists(v-if='blogItem.pure_taxonomies.categories' v-for='(blogItem, i) in props', :key='i')
+                .blog_item.clearfix(v-for='(blogCat, i) in blogItem.pure_taxonomies.categories', :key='i' v-if='blogCat.slug == catname')
+                  h2.blog_title
+                    router-link(v-bind:to='"/blog-post/"+blogItem.slug' v-html='blogItem.title.rendered')
+                  h3.blog_date_bar
+                    span.date(v-html='"<span>"+ blogItem.date.slice(8,10) +"</span>/<span>"+ blogItem.date.slice(5,7) +"</span>/<span>"+ blogItem.date.slice(0,4)+"</span>"') 
+                  .blog_img(v-if='blogItem.better_featured_image')
+                    img(v-bind:src='blogItem.better_featured_image.source_url')     
+                  .blog_excrept_content(v-if="blogItem.excerpt" v-html='blogItem.excerpt.rendered')
+                  .post_category_outer(v-if='blogItem.pure_taxonomies.categories')
+                    span.post_category
+                      | Posted In: 
+                      router-link(v-for='(blogCat, i) in blogItem.pure_taxonomies.categories', :key='i' v-bind:to='"/category/"+blogCat.slug') 
+                        span(v-html='blogCat.name') 
+                  .blog_readmore
+                    router-link(v-bind:to='"/blog-post/"+blogItem.slug') 
+                      | Read More 
+                      i.fa.fa-angle-right                                   
+          
+    Footer()        
+      

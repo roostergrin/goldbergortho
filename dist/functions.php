@@ -84,3 +84,5 @@ function rg_setup() {
 }
 endif;
 add_action( 'after_setup_theme', 'rg_setup' );
+
+add_image_size('custom-thumb', 456, 309, true);

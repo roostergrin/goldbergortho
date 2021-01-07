@@ -25,12 +25,15 @@ import DamonSmile from '@/pages/damon-smile/damon-smile'
 import DamonClear from '@/pages/damon-clear/damon-clear'
 import IteroElement from '@/pages/itero-element/itero-element'
 import Tads from '@/pages/tads/tads'
+import Blog from '@/pages/blog/blog'
 import InvisalignTreatment from '@/pages/invisalign-treatment/invisalign-treatment'
 import InvisalignTreatmentForTeens from '@/pages/invisalign-treatment-for-teens/invisalign-treatment-for-teens'
 import RoslynOfficeLocation from '@/pages/roslyn-office-location/roslyn-office-location'
 import AppointmentRequest from '@/pages/appointment-request/appointment-request'
 import PostAppointmentSurvey from '@/pages/post-appointment-survey/post-appointment-survey'
+import Category from '@/pages/category/category'
 import Sitemap from '@/pages/sitemap/sitemap'
+import BlogPost from '@/pages/blog-post/blog-post'
 import Smilesnap from '@/pages/smilesnap/smilesnap'
 import ThankYou from '@/pages/thank-you/thank-you'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
@@ -192,6 +195,12 @@ const router = new VueRouter({
       component: Tads
     },
     {
+      path: '/blog',
+      name: 'blog',
+      navigation: true,
+      component: Blog
+    },
+    {
       path: '/invisalign-treatment',
       name: 'invisalign-treatment',
       navigation: true,
@@ -228,10 +237,20 @@ const router = new VueRouter({
       component: Smilesnap
     },
     {
+      path: '/category/:slug',
+      name: 'Category',
+      component: Category
+    },
+    {
       path: '/sitemap',
       name: 'sitemap',
       navigation: false,
       component: Sitemap
+    },
+    {
+      path: '/blog-post/:id',
+      name: 'BlogPost',
+      component: BlogPost
     },
     {
       path: '/thank-you',
