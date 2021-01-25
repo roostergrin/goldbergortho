@@ -8,12 +8,12 @@
       .blog_img(v-if='blogItem.better_featured_image')
         img(v-bind:src='blogItem.better_featured_image.source_url')     
       .blog_excrept_content(v-if="blogItem.excerpt" v-html='blogItem.excerpt.rendered')
-      .post_category_outer(v-if='blogItem.pure_taxonomies.categories')
-        span.post_category
-          | 
-          b Posted In: 
-          router-link(v-for='(blogCat, i) in blogItem.pure_taxonomies.categories', :key='i' v-bind:to='"/category/"+blogCat.slug') 
-            span(v-html='blogCat.name')      
+      //- .post_category_outer(v-if='blogItem.pure_taxonomies.categories')
+      //-   span.post_category
+      //-     | 
+      //-     b Posted In: 
+      //-     router-link(v-for='(blogCat, i) in blogItem.pure_taxonomies.categories', :key='i' v-bind:to='"/category/"+blogCat.slug') 
+      //-       span(v-html='blogCat.name')      
       .blog_readmore
         router-link(v-bind:to='"/blog-post/"+blogItem.slug') 
           | Read More 
