@@ -17,7 +17,7 @@ function rg_serve_route_v1 () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'info@wordpress.com';
-  $to = 'form7test@gmail.com';
+  $to = 'drgoldberg@goldbergortho.com';
 
   $subject = 'Appointment Request Form';
   // $headers = "From: " . strip_tags($_POST['req-email']) . "\r\n";
@@ -46,7 +46,7 @@ function rg_serve_route_v2 () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'info@wordpress.com';
-  $to = 'form7test@gmail.com';
+  $to = 'drgoldberg@goldbergortho.com';
 
   $subject = 'Post Appointment Survey Form';
   // $headers = "From: " . strip_tags($_POST['req-email']) . "\r\n";
