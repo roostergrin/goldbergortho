@@ -18,7 +18,6 @@ import PalatalExpander from '@/pages/palatal-expander/palatal-expander'
 import BrushingAndFlossing from '@/pages/brushing-and-flossing/brushing-and-flossing'
 import SurgicalOrthodontics from '@/pages/surgical-orthodontics/surgical-orthodontics'
 import DentofacialOrthopedics from '@/pages/dentofacial-orthopedics/dentofacial-orthopedics'
-import Incognito from '@/pages/incognito/incognito'
 import ClarityAdvancedCeramicBrackets from '@/pages/clarity-advanced-ceramic-brackets/clarity-advanced-ceramic-brackets'
 import AcceledentAura from '@/pages/acceledent-aura/acceledent-aura'
 import DamonSmile from '@/pages/damon-smile/damon-smile'
@@ -152,12 +151,14 @@ const router = new VueRouter({
       navigation: true,
       component: DentofacialOrthopedics
     },
+    /**
     {
       path: '/incognito',
       name: 'incognito',
       navigation: true,
       component: Incognito
     },
+    **/
     {
       path: '/clarity-advanced-ceramic-brackets',
       name: 'clarity-advanced-ceramic-brackets',
