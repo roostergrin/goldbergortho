@@ -1,7 +1,7 @@
 <template lang='pug' src='./app.pug'></template>
 
 <script>
-// components
+import BaseBaseAccess from 'components/base-access/index'
 
 export default {
   async created () {
@@ -12,6 +12,9 @@ export default {
     this.$store.dispatch('VIEW_TYPES', 0)
     this.$store.dispatch('VIEW_SHOWMODAL', false)
     this.$store.dispatch('VIEW_MODALCONTENT', false)
+  },
+  components: {
+    BaseBaseAccess
   },
   name: 'app'
 }

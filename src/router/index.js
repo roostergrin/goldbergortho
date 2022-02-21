@@ -35,6 +35,7 @@ import Sitemap from '@/pages/sitemap/sitemap'
 import BlogPost from '@/pages/blog-post/blog-post'
 import Smilesnap from '@/pages/smilesnap/smilesnap'
 import ThankYou from '@/pages/thank-you/thank-you'
+import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
 
@@ -258,6 +259,12 @@ const router = new VueRouter({
       name: 'thank-you',
       navigation: false,
       component: ThankYou
+    },
+    {
+      path: '/accessibility-statement',
+      name: 'Accessibility Statement',
+      navigation: false,
+      component: accessibilityStatement
     },
     {
       path: '/styleguide',
