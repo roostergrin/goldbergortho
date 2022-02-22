@@ -1,4 +1,4 @@
-.pages-inner
+.pages-inner.apartpage
   Loader(v-show='loading')
   .content_part(v-if='props && !loading')
     Header()
@@ -29,6 +29,16 @@
             li
               router-link( to='/blog' v-bind:class="{ active: isActive }") 
                 span Blog
+      .new_technologies          
+        .container_manual.clearfix  
+          h4.techno_title(v-if='props.acf.technologies_title' v-html:span='props.acf.technologies_title')
+          .techno_outer(v-if='props.acf.technologies_list')
+            .techno_list.clearfix(v-for='TechList in props.acf.technologies_list')
+              .techno_left
+                h5(v-html:span='TechList.title')
+                .techintro(v-html:span='TechList.intro')
+              .techno_right
+                img(v-bind:src='TechList.img' alt='')                                                                    
           
     Footer()        
       

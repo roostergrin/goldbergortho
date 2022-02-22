@@ -1442,6 +1442,63 @@ p:empty
   -moz-transition-timing-function: ease-in-out
   -o-transition-timing-function: ease-in-out
 
+.techno_left
+  float: left
+  width: 65% 
+
+.techno_list:nth-child(even) .techno_left
+  float: right
+
+.techno_list:nth-child(even) .techno_right
+  float: left
+  padding-left: 0
+  padding-right: 45px
+
+.techno_right
+  float: right
+  width: 35%
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  padding-left: 45px
+
+h4.techno_title
+  color: #005994
+  font-size: 32px
+  font-weight: 500
+  padding-bottom: 0
+  margin-bottom: 0
+
+.techno_right img
+  border: 2px solid #005994 
+
+.new_technologies
+  background: #f2f0f6 
+  position: relative
+  padding: 60px 0 40px
+
+.techno_left h5
+  color: #248bb6
+  font-weight: 500
+  font-size: 23px
+
+.techno_list
+  border-bottom: 1px solid #7c888f
+  padding-bottom: 45px
+  padding-top: 45px
+
+.techno_list:last-child() 
+  border-bottom: none
+
+.apartpage .innerpage_content_wrap
+  padding-bottom: 0
+
+.techintro p 
+  font-weight: 400
+  font-size: 18px
+  font-family: 'Raleway' 
+  line-height: 33px      
+
 @media (min-width: 1025px) and (max-width: 1300px)
     .slider-home .swiper-button-prev
       left: 6%
@@ -1734,6 +1791,24 @@ p:empty
 @media only screen and (max-width: 767px)
     .container_manual
       padding: 0 15px
+
+    .techno_left 
+      width: 100%
+
+    .techno_right
+      width: 100%
+      padding-left: 0
+      margin-top: 25px 
+
+    .techno_right img
+      max-width: 260px
+      margin: 0px auto
+
+    .techno_list:nth-child(2n) .techno_right
+      padding-right: 0
+
+    .new_technologies
+      margin-top: 40px        
 
     #content_left h1.blogsingletitle
       font-size: 26px 
