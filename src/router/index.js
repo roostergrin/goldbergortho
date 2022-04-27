@@ -31,10 +31,10 @@ import RoslynOfficeLocation from '@/pages/roslyn-office-location/roslyn-office-l
 import AppointmentRequest from '@/pages/appointment-request/appointment-request'
 import PostAppointmentSurvey from '@/pages/post-appointment-survey/post-appointment-survey'
 import Category from '@/pages/category/category'
-import Sitemap from '@/pages/sitemap/sitemap'
+import ThankYou from '@/pages/thank-you/thank-you'
 import BlogPost from '@/pages/blog-post/blog-post'
 import Smilesnap from '@/pages/smilesnap/smilesnap'
-import ThankYou from '@/pages/thank-you/thank-you'
+import Sitemap from '@/pages/sitemap/sitemap'
 import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
@@ -244,10 +244,10 @@ const router = new VueRouter({
       component: Category
     },
     {
-      path: '/sitemap',
-      name: 'sitemap',
+      path: '/thank-you',
+      name: 'Thank You',
       navigation: false,
-      component: Sitemap
+      component: ThankYou
     },
     {
       path: '/blog-post/:id',
@@ -255,10 +255,10 @@ const router = new VueRouter({
       component: BlogPost
     },
     {
-      path: '/thank-you',
-      name: 'thank-you',
+      path: '/sitemap',
+      name: 'sitemap',
       navigation: false,
-      component: ThankYou
+      component: Sitemap
     },
     {
       path: '/accessibility-statement',
