@@ -46,7 +46,7 @@ export default {
         .then(res => {
           this.formSuccess = true
           setTimeout(() => {
-            window.location.href = 'http://goldbergortho.rgwplogin.com/thank-you'
+            window.location.href = 'https://goldbergortho.com/thank-you'
           }, 400)
           setTimeout(() => {
             this.yourName = ''
