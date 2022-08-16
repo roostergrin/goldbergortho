@@ -82,8 +82,8 @@
     try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
     catch(e){window.attachEvent("onload", $buo_f)}
   </script>
-       <script>
-        function openNav() {
+  <script>
+    function openNav() {
 			document.getElementById("mobileSideNav").style.width = "320px";
 		}
 		function closeNav() {
@@ -93,8 +93,8 @@
 		var activeId = document.getElementById("toggleClass-"+val);
         var x = document.getElementById("subMenu-"+val);
 		activeId.classList.toggle("active");
-         if (x.style.display == "none") {
-           x.style.display = "block";
+          if (x.style.display == "none") {
+            x.style.display = "block";
 			} else {
           x.style.display = "none";
 			}
@@ -104,9 +104,6 @@
   <script type="text/javascript">
     window.__smilesnap = window.__smilesnap || [];
     window.__smilesnap.cid = 'GSpGRfKWmKWqqwAAqSw2y5Gu';
-    window.__smilesnap.fullscreenSelector = '#smilesnap-expanded-container';
-    window.__smilesnap.forceOpen = false;
-	window.__smilesnap.suppressButton = true;
 
     (function() {
     var ss = document.createElement('script'); ss.type = 'text/javascript'; ss.async = true;
@@ -116,18 +113,18 @@
     })();
   </script>
     
-   <script type="text/javascript">
+  <script type="text/javascript">
 
-  (function(d){
-    var s = d.createElement("script");
-    s.setAttribute("data-account", "D3656BNpyD");
-    s.setAttribute("src", "https://cdn.userway.org/widget.js");
-    (d.body || d.head).appendChild(s);})(document);
+    (function(d){
+      var s = d.createElement("script");
+      s.setAttribute("data-account", "D3656BNpyD");
+      s.setAttribute("src", "https://cdn.userway.org/widget.js");
+      (d.body || d.head).appendChild(s);})(document);
 
-  (function(d){
-    var ns = d.createElement("noscript");
-    ns.innerHTML = `Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a>`;
-    (d.body || d.head).appendChild(ns);})(document);   
+    (function(d){
+      var ns = d.createElement("noscript");
+      ns.innerHTML = `Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a>`;
+      (d.body || d.head).appendChild(ns);})(document);   
 
   </script>
 
