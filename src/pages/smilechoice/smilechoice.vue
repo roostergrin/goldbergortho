@@ -25,3 +25,5 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" src="./smilechoice.sass"></style>
