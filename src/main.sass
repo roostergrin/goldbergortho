@@ -1497,7 +1497,199 @@ h4.techno_title
   font-weight: 400
   font-size: 18px
   font-family: 'Raleway' 
-  line-height: 33px      
+  line-height: 33px
+
+.smilechoice-page .innerpage-top
+  height: calc(100vh - 9rem)
+  margin-top: 9rem
+  position: relative
+
+.innerpage__overlay
+  position: absolute
+  top: 0
+  left: 0
+  background: rgba(6,21,128,.25)
+  width: 100%
+  height: 100%
+
+.smilechoice-page .innerpage-top h1  
+  margin-top: 80px
+  position: absolute
+  top: 65%
+  text-align: center
+  width: 100%
+  color: #fff
+  font-weight: 600
+
+.wondering
+  background-color: #ccc
+  padding: 4rem 0 3rem
+
+.wo-outer
+  display: flex
+  position: relative
+  flex-wrap: wrap
+  margin: 0 auto
+  width: 100%
+
+.wo-left
+  padding: 0 calc(24px / 2)
+  width: calc((5 / 12) * 100% - 0.1px)
+  position: relative
+
+.wo-right
+  padding: 0 calc(24px / 2)
+  width: calc((7 / 12) * 100% - 0.1px)
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.wo-right h2
+  color: #3189cc
+  font-weight: 700
+  font-size: 1.2em
+  margin: 0.2em 0 0.8em
+  font-family: inherit
+  line-height: 1.2
+
+.wo-right p
+  color: #3189cc
+  font-weight: 400
+  font-size: 18px
+  margin: 0 0 1.58em
+  font-family: inherit
+  line-height: 29px
+
+.threebox-outer
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+
+.innerboxes-blue-text
+  margin: 0 2rem 1rem
+  color: #3189cc
+  font-size: 1rem
+  font-weight: 600
+
+.wondering1
+  padding-top: 2rem
+
+.innerboxes-price
+  margin: 0 0 1rem
+  color: #070707
+  font-size: 1.5rem
+  font-weight: 600    
+
+.innerboxes
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  margin: 0 1rem
+  border: 2px #79858f solid
+  border-radius: 50px
+  box-shadow: 10px 10px #929fa9
+  background-color: #fff
+  padding: 2rem 1rem
+  width: 33%
+  text-align: center 
+
+.innerboxes-flex
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+.innerboxes-flex img
+  padding: 1rem
+  width: 100%
+  height: auto
+
+.innerboxes-level
+  margin-bottom: 1rem
+  text-transform: uppercase
+  color: #c9ae3c
+  font-size: 1.5rem
+  font-weight: 600
+
+.innerboxes-card-title
+  margin-bottom: 1rem
+  color: #3189cc
+  font-size: 25px
+  font-weight: 600
+
+.innerboxes-card-text
+  margin-bottom: 1rem
+  padding: 0
+  color: #505874
+  font-size: 17px
+  line-height: 28px
+
+.innerboxes-tagline
+  margin: 0 5px 1rem
+  color: #070707
+  font-size: 1.5rem
+  font-weight: 600
+  line-height: 30px
+
+.custom-smilechoice-cards__card-link
+  margin: 0 0 1rem
+  color: #c9ae3c
+  font-size: 1.25rem
+  font-weight: 600  
+
+.custom-smilechoice-cards__card-link:hover
+  color: #7e6e28 
+
+.interest 
+  text-align: center
+  padding: 30px 0
+  background-color: #ccc
+
+.interest_title
+  font-size: 15px
+
+.interest_btn a
+  background: #3189cc
+  color: #fff
+  padding: 1rem 2rem
+  display: inline-block
+  border-radius: 5rem
+  font-size: 20px
+  font-weight: 600
+  margin: 2rem 0
+
+.interest_btn a:hover
+  color: #3189cc
+  background: #fff 
+
+.wondering.new_interest
+  text-align: center
+  padding-top: 0 
+
+.interest-body a
+  display: inline-block
+  transition: background 0.25s ease-in, color 0.25s ease-in
+  margin: 1rem 0 2rem
+  border-radius: 5rem
+  background: #3189cc
+  padding: 10px 2rem
+  text-transform: uppercase
+  color: #3189cc
+  font-weight: 600
+  font-family: Arial, helvetica, sans-serif
+  font-size: 20px
+  background: #c9ae3c
+
+.interest-body a:hover
+  background: #C9983C
+  color: #fff  
+
+.interest-body a:first-of-type
+  margin: 2rem 0
+
+.new_interest p
+  font-size: 18px
+  font-family: arial                            
 
 @media (min-width: 1025px) and (max-width: 1300px)
     .slider-home .swiper-button-prev
@@ -1535,6 +1727,25 @@ h4.techno_title
 
     #content_left
       width: 64%
+
+    .threebox-outer
+      display: inline-block
+      text-align: center
+
+    .innerboxes
+      display: inline-block
+      width: 44% 
+      margin-bottom: 35px
+      vertical-align: top   
+
+    .smilechoice-page .innerpage-top
+      margin-top: 0
+      display: block
+      height: 50vh
+
+    .smilechoice-page .innerpage-top h1
+      margin-top: 0
+      font-size: 25px      
 
     .header
       position: relative
@@ -1791,6 +2002,49 @@ h4.techno_title
 @media only screen and (max-width: 767px)
     .container_manual
       padding: 0 15px
+
+    .smilechoice-page .innerpage-top
+      margin-top: 0
+      display: block
+      height: 50vh
+
+    .smilechoice-page .innerpage-top h1
+      margin-top: 0
+      font-size: 25px
+
+    .wo-left
+      width: 100%
+      max-width: 250px
+      margin: 0px auto
+
+    .wondering
+      padding-bottom: 0
+
+    .threebox-outer
+      display: block
+
+    .interest_btn a, .interest-body a
+      font-size: 17px
+      line-height: 25px
+
+    .interest, .wondering.new_interest
+      padding-left: 15px
+      padding-right: 15px    
+
+    .innerboxes
+      display: block
+      margin: 0
+      width: 100%
+      max-width: 290px
+      margin: 40px auto      
+
+    .wo-right
+      width: 100%
+      text-align: center
+      padding-top: 24px 
+
+    .smilechoice-page .content_part
+      background-color: #ccc     
 
     .techno_left 
       width: 100%

@@ -34,6 +34,7 @@ import Category from '@/pages/category/category'
 import ThankYou from '@/pages/thank-you/thank-you'
 import BlogPost from '@/pages/blog-post/blog-post'
 import Smilesnap from '@/pages/smilesnap/smilesnap'
+import SmileChoice from '@/pages/smilechoice/smilechoice'
 import Sitemap from '@/pages/sitemap/sitemap'
 import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
@@ -259,6 +260,12 @@ const router = new VueRouter({
       name: 'sitemap',
       navigation: false,
       component: Sitemap
+    },
+    {
+      path: '/smilechoice',
+      name: 'Smile Choice',
+      navigation: false,
+      component: SmileChoice
     },
     {
       path: '/accessibility-statement',

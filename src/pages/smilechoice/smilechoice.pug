@@ -1,0 +1,47 @@
+.pages-inner.smilechoice-page
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ props.acf.smile_choice_banner_img +')'}")
+      .innerpage__overlay    
+      h1(v-if='props.acf.smile_choice_banner_title' v-html:span='props.acf.smile_choice_banner_title')
+    .wondering
+      .container_manual
+        .wo-outer
+          .wo-left
+            img(v-if='props.acf.smile_treat_img' v-bind:src='props.acf.smile_treat_img' alt='' class='custom-smilechoice-banner__image')
+          .wo-right
+            h2(v-if='props.acf.smile_treat_title' v-html:span='props.acf.smile_treat_title')
+            .wo-intro(v-if='props.acf.smile_treat_intro' v-html:span='props.acf.smile_treat_intro')
+    .wondering.wondering1
+      .container_manual
+        .threebox-outer
+          .innerboxes(v-if='props.acf.smile_level_list' v-for='LevelList in props.acf.smile_level_list')
+            .innerboxes-flex
+              img(v-bind:src='LevelList.img' alt='')
+              .innerboxes-level(v-html:p='LevelList.level_title')
+              .innerboxes-card-title(v-html:p='LevelList.title')
+              .innerboxes-card-text(v-html:p='LevelList.days')
+              .innerboxes-tagline(v-html:p='LevelList.headings')
+            .innerboxes-flex 
+              .innerboxes-blue-text
+              .innerboxes-card-text(v-html:p='LevelList.aligners')
+              .innerboxes-price(v-html:p='LevelList.price')
+              router-link.custom-smilechoice-cards__card-link(v-bind:to='LevelList.btn_url' v-html:p='LevelList.btn_text')
+    .interest
+      .interest_title(v-if='props.acf.terms_intro' v-html:span='props.acf.terms_intro')
+      .interest_btn 
+        router-link(v-if='props.acf.consult_btn_url' v-bind:to='props.acf.consult_btn_url') 
+          span(v-if='props.acf.consult_btn_text' v-html:span='props.acf.consult_btn_text')
+    .wondering.new_interest
+      .interest-body
+        p(v-if='props.acf.interest_intro' v-html:span='props.acf.interest_intro')
+        router-link(v-if='props.acf.interest_btn_url' v-bind:to='props.acf.interest_btn_url') 
+          span(v-if='props.acf.interest_btn_text' v-html:span='props.acf.interest_btn_text')
+        p(v-if='props.acf.treat_intro' v-html:span='props.acf.treat_intro')
+        router-link(v-if='props.acf.treat_btn_url' v-bind:to='props.acf.treat_btn_url') 
+          span(v-if='props.acf.treat_btn_text' v-html:span='props.acf.treat_btn_text')
+
+
+    Footer()        
+      

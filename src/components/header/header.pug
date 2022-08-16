@@ -119,7 +119,10 @@
                   span iTero® Element™
               li
                 router-link( to='/tads' v-bind:class="{ active: isActive }") 
-                  span TADs  
+                  span TADs
+              li
+                router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
+                  span Smile Choice                    
           li
             router-link( to='/invisalign-treatment' v-bind:class="{ active: isActive }") 
               span Invisalign®             
@@ -242,7 +245,10 @@
                       span - iTero® Element™
                   li
                     router-link( to='/tads' v-bind:class="{ active: isActive }") 
-                      span - TADs 
+                      span - TADs
+                  li
+                    router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
+                      span Smile Choice                       
                li
                  router-link.header-nav-item( to='/invisalign-treatment' v-bind:class="{ active: isActive }") Invisalign®  
                  span(onclick='subMenu(5)' id='toggleClass-5' class='subMenu_open')
