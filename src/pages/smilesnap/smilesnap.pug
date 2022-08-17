@@ -10,7 +10,6 @@
           .content_all
             .smilesnapcontent#content
               .page_content(v-if='props.content.rendered' v-html:span='props.content.rendered')
-              .smilesnap-widget#smilesnap-expanded-container
         #content_right
           .hide-stock(v-if='props.better_featured_image')
             img(v-bind:src='props.better_featured_image.source_url')
