@@ -70,6 +70,9 @@
               li
                 router-link( to='/patient-forms' v-bind:class="{ active: isActive }") 
                   span Patient Forms
+              li
+                router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
+                  span Smile Choice                  
           li
             router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
               span About Ortho              
@@ -84,11 +87,11 @@
                 router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
                   span Two-Phase Treatment
               li
-                router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
-                  span Palatal Expander
-              li
                 router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
                   span Brushing and Flossing
+              li
+                router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
+                  span iTero® Element™                  
           li
             router-link( to='/surgical-orthodontics' v-bind:class="{ active: isActive }") 
               span Treatments 
@@ -109,20 +112,8 @@
                 router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }") 
                   span AcceleDent® Aura
               li
-                router-link( to='/damon-smile' v-bind:class="{ active: isActive }") 
-                  span Damon™ Smile 
-              li
-                router-link( to='/damon-clear' v-bind:class="{ active: isActive }") 
-                  span Damon™ Clear
-              li
-                router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
-                  span iTero® Element™
-              li
-                router-link( to='/tads' v-bind:class="{ active: isActive }") 
-                  span TADs
-              li
-                router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
-                  span Smile Choice                    
+                router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
+                  span Palatal Expander                                      
           li
             router-link( to='/invisalign-treatment' v-bind:class="{ active: isActive }") 
               span Invisalign®             
@@ -133,6 +124,9 @@
               li
                 router-link( to='/invisalign-treatment-for-teens' v-bind:class="{ active: isActive }") 
                   span Invisalign® Treatment for Teens
+              li
+                router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
+                  span Smile Choice                  
           li
             router-link( to='/roslyn-office-location' v-bind:class="{ active: isActive }") 
               span Contact             
@@ -194,6 +188,9 @@
                   li
                     router-link( to='/patient-forms' v-bind:class="{ active: isActive }") 
                       span - Patient Forms
+                  li
+                    router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
+                      span - Smile Choice                      
                li
                  router-link.header-nav-item( to='/about-orthodontics' v-bind:class="{ active: isActive }") About Ortho 
                  span(onclick='subMenu(3)' id='toggleClass-3' class='subMenu_open')
@@ -209,11 +206,11 @@
                     router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
                       span - Two-Phase Treatment
                   li
-                    router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
-                      span - Palatal Expander
-                  li
                     router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
-                      span - Brushing and Flossing 
+                      span - Brushing and Flossing
+                  li
+                    router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
+                      span - iTero® Element™                       
                li
                  router-link.header-nav-item( to='/surgical-orthodontics' v-bind:class="{ active: isActive }") Treatments 
                  span(onclick='subMenu(4)' id='toggleClass-4' class='subMenu_open')
@@ -235,20 +232,8 @@
                     router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }") 
                       span - AcceleDent® Aura
                   li
-                    router-link( to='/damon-smile' v-bind:class="{ active: isActive }") 
-                      span - Damon™ Smile 
-                  li
-                    router-link( to='/damon-clear' v-bind:class="{ active: isActive }") 
-                      span - Damon™ Clear
-                  li
-                    router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
-                      span - iTero® Element™
-                  li
-                    router-link( to='/tads' v-bind:class="{ active: isActive }") 
-                      span - TADs
-                  li
-                    router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
-                      span Smile Choice                       
+                    router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
+                      span - Palatal Expander                                             
                li
                  router-link.header-nav-item( to='/invisalign-treatment' v-bind:class="{ active: isActive }") Invisalign®  
                  span(onclick='subMenu(5)' id='toggleClass-5' class='subMenu_open')
@@ -260,6 +245,9 @@
                   li
                     router-link( to='/invisalign-treatment-for-teens' v-bind:class="{ active: isActive }") 
                       span - Invisalign® Treatment for Teens 
+                  li
+                    router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
+                      span - Smile Choice                      
                li
                  router-link.header-nav-item( to='/roslyn-office-location' v-bind:class="{ active: isActive }") Contact   
                  span(onclick='subMenu(6)' id='toggleClass-6' class='subMenu_open')

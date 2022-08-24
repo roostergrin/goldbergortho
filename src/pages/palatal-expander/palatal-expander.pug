@@ -14,21 +14,21 @@
           .subnav_menu
            h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')
            ul
-             li
-               router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
-                 span About Orthodontics
-             li
-               router-link( to='/for-all-ages' v-bind:class="{ active: isActive }") 
-                 span For All Ages
-             li
-               router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
-                 span Two-Phase Treatment
-             li
-               router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
-                 span Palatal Expander
-             li
-               router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
-                 span Brushing and Flossing
+              li
+                router-link( to='/surgical-orthodontics' v-bind:class="{ active: isActive }") 
+                  span Surgical Orthodontics
+              li
+                router-link( to='/dentofacial-orthopedics' v-bind:class="{ active: isActive }") 
+                  span Dentofacial Orthopedics
+              li
+                router-link( to='/clarity-advanced-ceramic-brackets' v-bind:class="{ active: isActive }") 
+                  span Clarity™ Advanced Ceramic Brackets
+              li
+                router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }") 
+                  span AcceleDent® Aura
+              li
+                router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
+                  span Palatal Expander  
           
     Footer()        
       
