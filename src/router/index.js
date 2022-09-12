@@ -35,6 +35,10 @@ import ThankYou from '@/pages/thank-you/thank-you'
 import BlogPost from '@/pages/blog-post/blog-post'
 import Smilesnap from '@/pages/smilesnap/smilesnap'
 import SmileChoice from '@/pages/smilechoice/smilechoice'
+import Lightforce from '@/pages/lightforce/lightforce'
+import ThreeDPrinter from '@/pages/3d-printer/3d-printer'
+import Propel from '@/pages/propel/propel'
+import Incognito from '@/pages/incognito/incognito'
 import Sitemap from '@/pages/sitemap/sitemap'
 import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
@@ -153,14 +157,12 @@ const router = new VueRouter({
       navigation: true,
       component: DentofacialOrthopedics
     },
-    /**
     {
       path: '/incognito',
       name: 'incognito',
       navigation: true,
       component: Incognito
     },
-    **/
     {
       path: '/clarity-advanced-ceramic-brackets',
       name: 'clarity-advanced-ceramic-brackets',
@@ -238,6 +240,24 @@ const router = new VueRouter({
       name: 'smilesnap',
       navigation: false,
       component: Smilesnap
+    },
+    {
+      path: '/lightforce',
+      name: 'Lightforce',
+      navigation: false,
+      component: Lightforce
+    },
+    {
+      path: '/3d-printer',
+      name: '3d Printer',
+      navigation: false,
+      component: ThreeDPrinter
+    },
+    {
+      path: '/propel',
+      name: 'Propel',
+      navigation: false,
+      component: Propel
     },
     {
       path: '/category/:slug',

@@ -72,26 +72,51 @@
                   span Patient Forms
               li
                 router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
-                  span Smile Choice                  
+                  span Smile Choice
           li
-            router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
-              span About Ortho              
+            router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
+              span Technology              
             ul.sub_menu
               li
-                router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
-                  span About Orthodontics
-              li
-                router-link( to='/for-all-ages' v-bind:class="{ active: isActive }") 
-                  span For All Ages
-              li
-                router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
-                  span Two-Phase Treatment
-              li
-                router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
-                  span Brushing and Flossing
-              li
                 router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
-                  span iTero® Element™                  
+                  span iTero
+              li
+                router-link( to='/lightforce' v-bind:class="{ active: isActive }") 
+                  span Lightforce 
+              li
+                router-link( to='/3d-printer' v-bind:class="{ active: isActive }") 
+                  span 3d Printer
+              li
+                router-link( to='/propel' v-bind:class="{ active: isActive }") 
+                  span Propel
+              li
+                router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }") 
+                  span AcceleDent® Aura 
+              li
+                router-link( to='/clarity-advanced-ceramic-brackets' v-bind:class="{ active: isActive }") 
+                  span Clarity™ Advanced Ceramic Brackets
+              li
+                router-link( to='/incognito' v-bind:class="{ active: isActive }") 
+                  span Incognito                                                                                                                                              
+          // li
+          //   router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
+          //     span About Ortho              
+          //   ul.sub_menu
+          //     li
+          //       router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
+          //         span About Orthodontics
+          //     li
+          //       router-link( to='/for-all-ages' v-bind:class="{ active: isActive }") 
+          //         span For All Ages
+          //     li
+          //       router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
+          //         span Two-Phase Treatment
+          //     li
+          //       router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
+          //         span Brushing and Flossing
+          //     li
+          //       router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
+          //         span iTero® Element™                  
           li
             router-link( to='/surgical-orthodontics' v-bind:class="{ active: isActive }") 
               span Treatments 
@@ -113,7 +138,19 @@
                   span AcceleDent® Aura
               li
                 router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
-                  span Palatal Expander                                      
+                  span Palatal Expander
+              li
+                router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
+                  span About Orthodontics
+              li
+                router-link( to='/for-all-ages' v-bind:class="{ active: isActive }") 
+                  span For All Ages
+              li
+                router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
+                  span Two-Phase Treatment
+              li
+                router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
+                  span Brushing and Flossing                                                        
           li
             router-link( to='/invisalign-treatment' v-bind:class="{ active: isActive }") 
               span Invisalign®             
@@ -190,27 +227,57 @@
                       span - Patient Forms
                   li
                     router-link( to='/smilechoice' v-bind:class="{ active: isActive }") 
-                      span - Smile Choice                      
+                      span - Smile Choice
+                  li
+                    router-link( to='/incognito' v-bind:class="{ active: isActive }") 
+                      span - Incognito                                           
                li
-                 router-link.header-nav-item( to='/about-orthodontics' v-bind:class="{ active: isActive }") About Ortho 
-                 span(onclick='subMenu(3)' id='toggleClass-3' class='subMenu_open')
+                 router-link.header-nav-item( to='/itero-element' v-bind:class="{ active: isActive }") Technology
+                 span(onclick='subMenu(31)' id='toggleClass-31' class='subMenu_open')
                    i.fa.fa-plus
-                 ul.sub_menuu(id='subMenu-3' style='display:none')  
-                  li
-                    router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
-                      span - About Orthodontics
-                  li
-                    router-link( to='/for-all-ages' v-bind:class="{ active: isActive }") 
-                      span - For All Ages
-                  li
-                    router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
-                      span - Two-Phase Treatment
-                  li
-                    router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
-                      span - Brushing and Flossing
+                 ul.sub_menuu(id='subMenu-31' style='display:none')
                   li
                     router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
-                      span - iTero® Element™                       
+                      span - iTero
+                  li
+                    router-link( to='/lightforce' v-bind:class="{ active: isActive }") 
+                      span - Lightforce
+                  li
+                    router-link( to='/3d-printer' v-bind:class="{ active: isActive }") 
+                      span - 3d Printer
+                  li
+                    router-link( to='/propel' v-bind:class="{ active: isActive }") 
+                      span - Propel
+                  li
+                    router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }") 
+                      span - AcceleDent® Aura  
+                  li
+                    router-link( to='/clarity-advanced-ceramic-brackets' v-bind:class="{ active: isActive }") 
+                      span - Clarity™ Advanced Ceramic Brackets 
+                  li
+                    router-link( to='/incognito' v-bind:class="{ active: isActive }") 
+                      span - Incognito                                                                                      
+
+               // li
+               //   router-link.header-nav-item( to='/about-orthodontics' v-bind:class="{ active: isActive }") About Ortho 
+               //   span(onclick='subMenu(3)' id='toggleClass-3' class='subMenu_open')
+               //     i.fa.fa-plus
+               //   ul.sub_menuu(id='subMenu-3' style='display:none')  
+               //    li
+               //      router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
+               //        span - About Orthodontics
+               //    li
+               //      router-link( to='/for-all-ages' v-bind:class="{ active: isActive }") 
+               //        span - For All Ages
+               //    li
+               //      router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
+               //        span - Two-Phase Treatment
+               //    li
+               //      router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
+               //        span - Brushing and Flossing
+               //    li
+               //      router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
+               //        span - iTero® Element™                       
                li
                  router-link.header-nav-item( to='/surgical-orthodontics' v-bind:class="{ active: isActive }") Treatments 
                  span(onclick='subMenu(4)' id='toggleClass-4' class='subMenu_open')
@@ -233,7 +300,19 @@
                       span - AcceleDent® Aura
                   li
                     router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
-                      span - Palatal Expander                                             
+                      span - Palatal Expander
+                  li
+                    router-link( to='/about-orthodontics' v-bind:class="{ active: isActive }") 
+                      span - About Orthodontics
+                  li
+                    router-link( to='/for-all-ages' v-bind:class="{ active: isActive }") 
+                      span - For All Ages
+                  li
+                    router-link( to='/two-phase-treatment' v-bind:class="{ active: isActive }") 
+                      span - Two-Phase Treatment
+                  li
+                    router-link( to='/brushing-and-flossing' v-bind:class="{ active: isActive }") 
+                      span - Brushing and Flossing                                                                   
                li
                  router-link.header-nav-item( to='/invisalign-treatment' v-bind:class="{ active: isActive }") Invisalign®  
                  span(onclick='subMenu(5)' id='toggleClass-5' class='subMenu_open')

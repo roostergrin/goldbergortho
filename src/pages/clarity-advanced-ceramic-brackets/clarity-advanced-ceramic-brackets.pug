@@ -3,32 +3,16 @@
   .content_part(v-if='props && !loading')
     Header()
     .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
-    .innerpage_content_wrap
+    .innerpage_content_wrap.content_full
       .container_manual.clearfix
         #content_left
           h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
           .content_all(v-if='props.content.rendered' v-html:span='props.content.rendered')
-        #content_right
+        #content_right(v-if='props.better_featured_image')
           .hide-stock(v-if='props.better_featured_image')
             img(v-bind:src='props.better_featured_image.source_url')
           .subnav_menu
-           h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')
-           ul
-              li
-                router-link( to='/surgical-orthodontics' v-bind:class="{ active: isActive }") 
-                  span Surgical Orthodontics
-              li
-                router-link( to='/dentofacial-orthopedics' v-bind:class="{ active: isActive }") 
-                  span Dentofacial Orthopedics
-              li
-                router-link( to='/clarity-advanced-ceramic-brackets' v-bind:class="{ active: isActive }") 
-                  span Clarity™ Advanced Ceramic Brackets
-              li
-                router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }") 
-                  span AcceleDent® Aura
-              li
-                router-link( to='/palatal-expander' v-bind:class="{ active: isActive }") 
-                  span Palatal Expander                 
+           h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')                                  
           
     Footer()        
       
