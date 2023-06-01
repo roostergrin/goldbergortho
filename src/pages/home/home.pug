@@ -8,7 +8,7 @@
           .slider-home(v-if='props.acf.homepage_slider_list')
             swiper(:options='swiperOption1')
               swiper-slide(v-for='(homeSlider, index) in props.acf.homepage_slider_list')
-                img(v-bind:src='homeSlider.bg_image')
+                img(v-bind:src='homeSlider.bg_image' alt='')
                 .container_manual.clearfix
                   .home_slider_outerr
                     .home_slider_heading(v-html='homeSlider.heading')
@@ -53,9 +53,9 @@
             .home-content_left
               h1(v-if='props.acf.welcome_section_title' v-html:span='props.acf.welcome_section_title')
               .testimonials-home 
-                h3(v-if='props.acf.our_patient_title' v-html:span='props.acf.our_patient_title')
+                h2(v-if='props.acf.our_patient_title' v-html:span='props.acf.our_patient_title')
                 .testimonials-home-outer
-                  iframe(scrolling='no' v-if='props.acf.home_testominials_iframe' v-bind:src='props.acf.home_testominials_iframe')
+                  iframe(scrolling='no' v-if='props.acf.home_testominials_iframe' v-bind:src='props.acf.home_testominials_iframe' title='Home Testimonials')
             .home-content_right(v-if='props.acf.welcome_right_section_content' v-html:span='props.acf.welcome_right_section_content')
 
             

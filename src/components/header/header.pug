@@ -15,7 +15,7 @@
           a#patient-login.patient-login.external(:href='props.acf.patient_login_url' v-if='props.acf.patient_login_url') 
             span(v-if='props.acf.patient_login_text' v-html:span='props.acf.patient_login_text')
         .social-icons(v-if='props.acf.social_bar_list')
-          a.external(v-bind:href='SocialList.url' v-for='SocialList in props.acf.social_bar_list' target='_blank')
+          a.external(v-bind:href='SocialList.url' v-for='(SocialList, i) in props.acf.social_bar_list' target='_blank' :aria-label='"social-links-" + i')
             i.fa(v-bind:class='SocialList.icon')     
   .header_menu
     .container_manual.clearfix
@@ -179,7 +179,7 @@
                   span Post-Appointment Survey  
         .mobile-nav-manual
            #mobileSideNav.mobile_menu
-             a.closebtn.idw-icon-close(href='javascript:void(0)' onclick='closeNav()')
+             a.closebtn.idw-icon-close(onclick='closeNav()')
                i.fa.fa-times
              ul.menu
                li
