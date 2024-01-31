@@ -22,6 +22,16 @@ export default {
     Loader,
     Header,
     Footer
+  },
+  methods: {
+    calculateAllowed3 () {
+      document.getElementById('NR4BranchIFrameCheckIn3').src = 'https://pplpractice-reviews.com/GolRoslyn/contact-me'
+    }
+  },
+  created: function () {
+  },
+  mounted: function () {
+    this.calculateAllowed3()
   }
 }
 </script>

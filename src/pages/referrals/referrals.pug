@@ -7,9 +7,7 @@
       .container_manual.clearfix
         #content_left
           h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
-          .content_all
-            .smilesnapcontent#content
-              .page_content(v-if='props.content.rendered' v-html:span='props.content.rendered')
+          .content_all(v-if='props.content.rendered' v-html:span='props.content.rendered')
         #content_right
           .hide-stock(v-if='props.better_featured_image')
             img(v-bind:src='props.better_featured_image.source_url')
@@ -23,14 +21,11 @@
                 router-link( to='/appointment-request' v-bind:class="{ active: isActive }") 
                   span Appointment Request
               li
-                a( href='https://www.goldbergortho.com/wp-content/uploads/2020/08/How-to-Photograph-Your-Smile-Flyer.pdf' v-bind:class="{ active: isActive }" target="_blank") 
-                  span How to Photograph Your Smile
-              li
                 a( href='https://pplpractice-reviews.com/GolRoslyn' v-bind:class="{ active: isActive }") 
-                  span Post-Appointment Survey 
+                  span Post-Appointment Survey
               li
                 router-link( to='/referrals' v-bind:class="{ active: isActive }") 
-                  span Referrals                  
+                  span Referrals                   
           
     Footer()        
       

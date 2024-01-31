@@ -22,12 +22,18 @@
 
     <!-- Google Tag Manager -->
 
-
     <!-- SET YOUR GOOGLE FONT IN THE ENQUEUE.PHP FILE FOR BEST SPEED -->
 
   </head>
-  <body>
+  <body onload="codeAddress(); codeAddress2(); codeAddress3();">
     <div id='app' role='application'></div>
+
+     <iframe style='display:none' name="NR4BranchIFrameCheckIn" id="NR4BranchIFrameCheckIn" title="Form" style="margin:0px;padding:0px;border:0px;border-style:none;width:100%;min-height:500px;overflow:hidden;" scrolling="no" src="" ></iframe>
+
+     <iframe style='display:none' name="NR4BranchIFrameCheckIn2" id ="NR4BranchIFrameCheckIn2"  title="Form" style ="margin:0px;padding:0px;border:0px;border-style:none;width:100%;min-height:500px;overflow:hidden;" scrolling="no" src="" ></iframe>
+
+     <iframe style='display:none' name="NR4BranchIFrameCheckIn3" id ="NR4BranchIFrameCheckIn3" title="Form" style="margin:0px;padding:0px;border:0px;border-style:none;width:100%;min-height:500px;overflow:hidden;" scrolling="no" src="" ></iframe>     
+   
     <!-- built files will be auto injected -->
     <script type="text/javascript">
       WebFontConfig = {
@@ -61,5 +67,59 @@
 			}
 		}
     </script> 
+
+     <script type="text/javascript">
+        function codeAddress() {
+          document.getElementById('NR4BranchIFrameCheckIn').src = 'https://pplpractice-reviews.com/GolRoslyn/virtual-assessment?&sessionGuid=' + encodeURIComponent(sessionStorage.getItem('nr4SessionGuid')) + '&sessionUrl='+encodeURIComponent(sessionStorage.getItem('nr4SessionUrl')) + '&sessionFormContainerUrl='+encodeURIComponent(window.location.href);
+        }
+      </script> 
+
+     <script type="text/javascript">
+        function codeAddress2() {
+          document.getElementById('NR4BranchIFrameCheckIn2').src = 'https://pplpractice-reviews.com/GolRoslyn/in-person?&sessionGuid=' + encodeURIComponent(sessionStorage.getItem('nr4SessionGuid')) + '&sessionUrl='+encodeURIComponent(sessionStorage.getItem('nr4SessionUrl')) + '&sessionFormContainerUrl='+encodeURIComponent(window.location.href);
+        }
+      </script>
+
+     <script type="text/javascript">
+        function codeAddress3() {
+          document.getElementById('NR4BranchIFrameCheckIn3').src = 'https://pplpractice-reviews.com/GolRoslyn/contact-me?&sessionGuid=' + encodeURIComponent(sessionStorage.getItem('nr4SessionGuid')) + '&sessionUrl='+encodeURIComponent(sessionStorage.getItem('nr4SessionUrl')) + '&sessionFormContainerUrl='+encodeURIComponent(window.location.href);
+        }
+      </script>                  
+
+      <script>
+        var iframeResize = function(event) {
+        try {
+        var nr4data = event.data;
+        if (nr4data[0].messageSource == "nr4ReviewCheckIn" && nr4data[0].messageType == "responsePageRendered") {
+        //TODO: Add your conversion tracking events here, such as gtag calls
+        }
+        if (nr4data[0].messageSource == "nr4ReviewCheckIn" && nr4data[0].messageType == "nr4IframeScroll") {
+        var scrollToOffset = nr4data[0].scrollToOffset;
+        var scrollToIframe = document.getElementById('NR4BranchIFrameCheckIn').offsetTop;
+        var scrollToIframe = document.getElementById('NR4BranchIFrameCheckIn2').offsetTop;
+        var scrollToIframe = document.getElementById('NR4BranchIFrameCheckIn3').offsetTop;
+        window.scrollTo({ top: scrollToIframe + scrollToOffset, left: 0, behavior: 'smooth'});
+        }
+        if (nr4data[0].messageSource == "nr4ReviewCheckIn" && nr4data[0].messageType == "iframeHeight") {
+        var height = nr4data[0].bodyOffsetHeight;
+        if (height == 0) {
+        // May also use nr4data[0].iframeHeight which has a minimum of 1000px
+        height = nr4data[0].iframeHeight;
+        Proprietary
+        }
+        document.getElementById('NR4BranchIFrameCheckIn').style.height = height + "px";
+        document.getElementById('NR4BranchIFrameCheckIn2').style.height = height + "px";
+        document.getElementById('NR4BranchIFrameCheckIn3').style.height = height + "px";
+        }
+        } catch (err) { console.log('GetIframeResizeAndResponsePageRenderedReceiver: ' + err); }
+        };
+        if (window.addEventListener) {
+        window.addEventListener("message", iframeResize, false);
+        } else if (window.attachEvent) {
+        window.attachEvent("onmessage", iframeResize);
+        }
+      </script>
+
+    <script src="https://clients-cdn.pplpractice.com/chatbot/89707147.js"></script>   
   </body>
 </html>

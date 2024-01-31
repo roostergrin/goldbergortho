@@ -24,6 +24,16 @@ export default {
     Header,
     Footer,
     AppointmentRequestForm
+  },
+  methods: {
+    calculateAllowed2 () {
+      document.getElementById('NR4BranchIFrameCheckIn2').src = 'https://pplpractice-reviews.com/GolRoslyn/in-person'
+    }
+  },
+  created: function () {
+  },
+  mounted: function () {
+    this.calculateAllowed2()
   }
 }
 </script>

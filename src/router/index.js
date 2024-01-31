@@ -30,6 +30,7 @@ import InvisalignTreatmentForTeens from '@/pages/invisalign-treatment-for-teens/
 import RoslynOfficeLocation from '@/pages/roslyn-office-location/roslyn-office-location'
 import AppointmentRequest from '@/pages/appointment-request/appointment-request'
 import PostAppointmentSurvey from '@/pages/post-appointment-survey/post-appointment-survey'
+import Referrals from '@/pages/referrals/referrals'
 import Category from '@/pages/category/category'
 import ThankYou from '@/pages/thank-you/thank-you'
 import BlogPost from '@/pages/blog-post/blog-post'
@@ -224,6 +225,12 @@ const router = new VueRouter({
       component: RoslynOfficeLocation
     },
     {
+      path: '/referrals',
+      name: 'referrals',
+      navigation: true,
+      component: Referrals
+    },
+    {
       path: '/appointment-request',
       name: 'appointment-request',
       navigation: true,
@@ -236,7 +243,7 @@ const router = new VueRouter({
       component: PostAppointmentSurvey
     },
     {
-      path: '/smilesnap',
+      path: '/virtual-consultation',
       name: 'smilesnap',
       navigation: false,
       component: Smilesnap

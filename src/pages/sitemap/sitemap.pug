@@ -137,7 +137,10 @@
                       span Appointment Request
                   li
                     a(href='https://pplpractice-reviews.com/GolRoslyn') 
-                      span Post-Appointment Survey  
+                      span Post-Appointment Survey
+                  li
+                    router-link( to='/referrals' v-bind:class="{ active: isActive }") 
+                      span Referrals                         
               li
                 router-link( to='/sitemap' v-bind:class="{ active: isActive }") 
                   span Sitemap

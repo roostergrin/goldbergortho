@@ -1,4 +1,4 @@
-<template lang='pug' src='./smilesnap.pug'></template>
+<template lang='pug' src='./referrals.pug'></template>
 
 <script>
 import Loader from 'components/loader/loader'
@@ -6,10 +6,10 @@ import Header from 'components/header/header'
 import Footer from 'components/footer/footer'
 
 export default {
-  name: 'smilesnap',
+  name: 'roslyn-office-location',
   computed: {
     props () {
-      return this.$store.state.pages['virtual-consultation']
+      return this.$store.state.pages['referrals']
     },
     propspageheader () {
       return this.$store.state.app['header']
@@ -22,16 +22,6 @@ export default {
     Loader,
     Header,
     Footer
-  },
-  methods: {
-    calculateAllowed () {
-      document.getElementById('NR4BranchIFrameCheckIn').src = 'https://pplpractice-reviews.com/GolRoslyn/virtual-assessment'
-    }
-  },
-  created: function () {
-  },
-  mounted: function () {
-    this.calculateAllowed()
   }
 }
 </script>

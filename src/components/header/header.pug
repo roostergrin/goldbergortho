@@ -176,7 +176,10 @@
                   span Appointment Request
               li
                 a( href='https://pplpractice-reviews.com/GolRoslyn' v-bind:class="{ active: isActive }") 
-                  span Post-Appointment Survey  
+                  span Post-Appointment Survey
+              li
+                router-link( to='/referrals' v-bind:class="{ active: isActive }") 
+                  span Referrals                     
         .mobile-nav-manual
            #mobileSideNav.mobile_menu
              a.closebtn.idw-icon-close(onclick='closeNav()')
@@ -341,6 +344,8 @@
                   li
                     a( href='https://pplpractice-reviews.com/GolRoslyn' v-bind:class="{ active: isActive }") 
                       span - Post-Appointment Survey                 
-                    
+                  li
+                    router-link( to='/referrals' v-bind:class="{ active: isActive }") 
+                      span - Referrals                   
                   
                   
