@@ -7,7 +7,16 @@
       .container_manual.clearfix
         #content_left
           h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
-          .content_all(v-if='props.content.rendered' v-html:span='props.content.rendered')
+          .content_all
+            .content_info(v-if='props.content.rendered' v-html:span='props.content.rendered')
+            .beforeafter_slider(v-if='props.acf.before_after_slider_list')
+              swiper(:options='swiperOption1')
+                swiper-slide(v-for='BeforeAfterSlider in props.acf.before_after_slider_list')
+                  img(v-bind:src='BeforeAfterSlider.url')
+                .swiper-button-prev(slot='button-prev')
+                  .fa.fa-chevron-left
+                .swiper-button-next(slot='button-next')  
+                  .fa.fa-chevron-right           
         #content_right
           .hide-stock(v-if='props.better_featured_image')
             img(v-bind:src='props.better_featured_image.source_url')

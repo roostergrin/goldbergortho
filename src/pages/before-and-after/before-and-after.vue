@@ -22,6 +22,26 @@ export default {
     Loader,
     Header,
     Footer
+  },
+  data () {
+    return {
+      swiperOption1: {
+        centeredSlides: true,
+        loop: true,
+        autoHeight: true,
+        spaceBetween: 30,
+        effect: 'fade',
+        speed: 1500,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }
+    }
   }
 }
 </script>
