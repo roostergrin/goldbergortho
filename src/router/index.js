@@ -158,24 +158,28 @@ const router = new VueRouter({
       navigation: true,
       component: DentofacialOrthopedics
     },
+    /*
     {
       path: '/incognito',
       name: 'incognito',
       navigation: true,
       component: Incognito
     },
+    */
     {
       path: '/clarity-advanced-ceramic-brackets',
       name: 'clarity-advanced-ceramic-brackets',
       navigation: true,
       component: ClarityAdvancedCeramicBrackets
     },
+    /*
     {
       path: '/acceledent-aura',
       name: 'acceledent-aura',
       navigation: true,
       component: AcceledentAura
     },
+    */
     {
       path: '/damon-smile',
       name: 'damon-smile',
@@ -260,12 +264,14 @@ const router = new VueRouter({
       navigation: false,
       component: ThreeDPrinter
     },
+    /*
     {
       path: '/propel',
       name: 'Propel',
       navigation: false,
       component: Propel
     },
+    */
     {
       path: '/category/:slug',
       name: 'Category',
