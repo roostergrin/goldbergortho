@@ -15,26 +15,26 @@
            h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')
            ul
              li
-               router-link( to='/itero-element' v-bind:class="{ active: isActive }") 
+               router-link( to='/itero-element' v-bind:class="{ active: isActive }")
                  span iTero® Element™
              li
-               router-link( to='/lightforce' v-bind:class="{ active: isActive }") 
-                 span Lightforce 
+               router-link( to='/lightforce' v-bind:class="{ active: isActive }")
+                 span Lightforce
              li
-               router-link( to='/3d-printer' v-bind:class="{ active: isActive }") 
+               router-link( to='/3d-printer' v-bind:class="{ active: isActive }")
                  span 3d Printer
-             li
-               router-link( to='/propel' v-bind:class="{ active: isActive }") 
-                 span Propel 
-             li
-               router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }") 
+             //-li
+               router-link( to='/propel' v-bind:class="{ active: isActive }")
+                 span Propel
+             //-li
+               router-link( to='/acceledent-aura' v-bind:class="{ active: isActive }")
                  span AcceleDent® Aura
              li
-               router-link( to='/clarity-advanced-ceramic-brackets' v-bind:class="{ active: isActive }") 
-                 span Clarity™ Advanced Ceramic Brackets 
-             li
-               router-link( to='/incognito' v-bind:class="{ active: isActive }") 
-                 span Incognito                                                    
-          
-    Footer()        
-      
+               router-link( to='/clarity-advanced-ceramic-brackets' v-bind:class="{ active: isActive }")
+                 span Clarity™ Advanced Ceramic Brackets
+             //-li
+               router-link( to='/incognito' v-bind:class="{ active: isActive }")
+                 span Incognito
+
+    Footer()
+
