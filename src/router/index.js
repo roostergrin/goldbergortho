@@ -38,8 +38,7 @@ import Smilesnap from '@/pages/smilesnap/smilesnap'
 import SmileChoice from '@/pages/smilechoice/smilechoice'
 import Lightforce from '@/pages/lightforce/lightforce'
 import ThreeDPrinter from '@/pages/3d-printer/3d-printer'
-// import Propel from '@/pages/propel/propel'
-// import Incognito from '@/pages/incognito/incognito'
+import Planmeca from '../pages/planmeca-3d/planmeca.vue'
 import Sitemap from '@/pages/sitemap/sitemap'
 import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
@@ -158,28 +157,18 @@ const router = new VueRouter({
       navigation: true,
       component: DentofacialOrthopedics
     },
-    /*
-    {
-      path: '/incognito',
-      name: 'incognito',
-      navigation: true,
-      component: Incognito
-    },
-    */
     {
       path: '/clarity-advanced-ceramic-brackets',
       name: 'clarity-advanced-ceramic-brackets',
       navigation: true,
       component: ClarityAdvancedCeramicBrackets
     },
-    /*
     {
-      path: '/acceledent-aura',
-      name: 'acceledent-aura',
+      path: '/planmeca-3d',
+      name: 'planmeca-3d',
       navigation: true,
-      component: AcceledentAura
+      component: Planmeca
     },
-    */
     {
       path: '/damon-smile',
       name: 'damon-smile',

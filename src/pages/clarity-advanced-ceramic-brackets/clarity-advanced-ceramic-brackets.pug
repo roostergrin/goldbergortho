@@ -3,16 +3,32 @@
   .content_part(v-if='props && !loading')
     Header()
     .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
-    .innerpage_content_wrap.content_full
+    .innerpage_content_wrap
       .container_manual.clearfix
         #content_left
           h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
           .content_all(v-if='props.content.rendered' v-html:span='props.content.rendered')
-        #content_right(v-if='props.better_featured_image')
+        #content_right
           .hide-stock(v-if='props.better_featured_image')
             img(v-bind:src='props.better_featured_image.source_url')
           .subnav_menu
-           h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')                                  
-          
-    Footer()        
-      
+           h4(v-if='propspageheader.acf.submenu_title' v-html:span='propspageheader.acf.submenu_title')
+           ul
+             li
+               router-link( to='/itero-element' v-bind:class="{ active: isActive }")
+                 span iTero® Element™
+             li
+               router-link( to='/lightforce' v-bind:class="{ active: isActive }")
+                 span Lightforce
+             li
+               router-link( to='/3d-printer' v-bind:class="{ active: isActive }")
+                 span 3d Printer
+             li
+               router-link( to='/clarity-advanced-ceramic-brackets' v-bind:class="{ active: isActive }")
+                 span Clarity™ Advanced Ceramic Brackets
+             li
+               router-link( to='/planmeca-3d' v-bind:class="{ active: isActive }")
+                 span Planmeca
+
+    Footer()
+
