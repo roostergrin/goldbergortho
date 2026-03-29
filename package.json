@@ -86,7 +86,7 @@
     "ora": "^1.4.0",
     "phantomjs-prebuilt": "^2.1.14",
     "prerender-spa-plugin": "^3.4.0",
-    "pug": "^2.0.0-rc.2",
+    "pug": "^3.0.3",
     "require-dir": "^0.3.2",
     "rimraf": "^2.6.0",
     "run-sequence": "^2.1.0",
