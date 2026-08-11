@@ -12,7 +12,7 @@ export default {
   },
   computed: {
     props () {
-      return this.$store.state.app['header']
+      return this.$store.state.app['header'] || { acf: {} }
     }
   },
   components: {
