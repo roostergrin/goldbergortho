@@ -7,12 +7,17 @@ import Footer from 'components/footer/footer'
 
 export default {
   name: 'roslyn-office-location',
+  data () {
+    return {
+      isActive: false
+    }
+  },
   computed: {
     props () {
       return this.$store.state.pages['roslyn-office-location']
     },
     propspageheader () {
-      return this.$store.state.app['header']
+      return this.$store.state.app['header'] || { acf: {} }
     },
     loading () {
       return this.$store.state.loading

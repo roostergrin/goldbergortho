@@ -3,6 +3,13 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WBT6DBC3');</script>
+    <!-- End Google Tag Manager -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
@@ -56,6 +63,10 @@
     
   </head>
   <body onload="codeAddress(); codeAddress2(); codeAddress3();">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBT6DBC3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div id='app' role='application'></div>
 
     <iframe style='display:none' name="NR4BranchIFrameCheckIn" id="NR4BranchIFrameCheckIn" title="Form" style="margin:0px;padding:0px;border:0px;border-style:none;width:100%;min-height:500px;overflow:hidden;" scrolling="no" src="" ></iframe>
@@ -161,6 +172,15 @@
         var nr4data = event.data;
         if (nr4data[0].messageSource == "nr4ReviewCheckIn" && nr4data[0].messageType == "responsePageRendered") {
         //TODO: Add your conversion tracking events here, such as gtag calls
+        try {
+        var postObject = JSON.stringify({
+          event: 'iframeFormSubmit',
+          form_url: window.location.href
+        });
+        parent.postMessage(postObject, '*');
+        } catch (e) {
+        window.console && window.console.log(e);
+        }
         }
         if (nr4data[0].messageSource == "nr4ReviewCheckIn" && nr4data[0].messageType == "nr4IframeScroll") {
         var scrollToOffset = nr4data[0].scrollToOffset;

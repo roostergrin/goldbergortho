@@ -8,12 +8,17 @@ import AppointmentRequestForm from 'components/form/appointment-request-form/app
 
 export default {
   name: 'appointment-request',
+  data () {
+    return {
+      isActive: false
+    }
+  },
   computed: {
     props () {
       return this.$store.state.pages['appointment-request']
     },
     propspageheader () {
-      return this.$store.state.app['header']
+      return this.$store.state.app['header'] || { acf: {} }
     },
     loading () {
       return this.$store.state.loading
