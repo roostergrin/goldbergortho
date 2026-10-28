@@ -1,0 +1,46 @@
+/* Goldberg Orthodontics colors for the CookieConsent banner (static/consent/consent.js) */
+#cc-main {
+  --cc-font-family: 'Raleway', sans-serif;
+  --cc-modal-border-radius: 6px;
+  --cc-btn-border-radius: 4px;
+  --cc-primary-color: #333333;
+  --cc-secondary-color: #4f4f4f;
+  --cc-btn-primary-bg: #005994;
+  --cc-btn-primary-color: #ffffff;
+  --cc-btn-primary-border-color: #005994;
+  --cc-btn-primary-hover-bg: #003f6b;
+  --cc-btn-primary-hover-color: #ffffff;
+  --cc-btn-primary-hover-border-color: #003f6b;
+  --cc-btn-secondary-bg: #005994;
+  --cc-btn-secondary-color: #ffffff;
+  --cc-btn-secondary-border-color: #005994;
+  --cc-btn-secondary-hover-bg: #003f6b;
+  --cc-btn-secondary-hover-color: #ffffff;
+  --cc-btn-secondary-hover-border-color: #003f6b;
+  --cc-toggle-on-bg: #005994;
+  --cc-link-color: #005994;
+  --cc-z-index: 2147483000;
+}
+
+#cc-main .cm__title,
+#cc-main .pm__title {
+  font-family: 'Lora', serif;
+}
+
+/* "Manage preferences" stays clearly secondary to Accept/Reject but still a real button */
+#cc-main .cm__btn[data-role="show"] {
+  background: #ffffff;
+  color: #005994;
+  border-color: #005994;
+}
+
+#cc-main .cm__btn[data-role="show"]:hover {
+  background: #eaf2f8;
+}
+
+/* Keep the banner clear of the UserWay accessibility button (bottom left) on phones */
+@media screen and (max-width: 640px) {
+  #cc-main .cm--bottom {
+    bottom: 80px;
+  }
+}

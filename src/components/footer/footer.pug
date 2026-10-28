@@ -14,8 +14,13 @@
         span(v-if='props.acf.copyright_text' v-html:span='props.acf.copyright_text')  
         span |  
           router-link(v-if='props.acf.copyright_sitemap_url' v-bind:to='props.acf.copyright_sitemap_url') 
-            span(v-if='props.acf.copyright_sitemap_text' v-html:span='props.acf.copyright_sitemap_text') 
+            span(v-if='props.acf.copyright_sitemap_text' v-html:span='props.acf.copyright_sitemap_text')
+        .footer_policy_links
+          router-link(to='/privacy-policy') Privacy Policy
+          span.footer_sep |
+          router-link(to='/cookie-policy') Cookie Policy
+          span.footer_sep |
+          button.footer_cookie_prefs(type='button' @click='openCookiePreferences') Cookie Preferences
       .copyright_right
         .backtotop
           a#back-to-top(href='#' v-scroll-to="'#app'") Back to Top    
-  a(href="javascript:void(0)").smilesnap-button#sss(style="display:none") CLICK HERE FOR SMILESNAP

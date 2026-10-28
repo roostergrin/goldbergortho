@@ -13,6 +13,12 @@ function load_scripts() {
 	wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/static/js/app.js', array(), filemtime( get_template_directory() . '/static/js/app.js' ), true );
 	wp_enqueue_style('main-styles', get_template_directory_uri() . '/static/css/app.css', array(), filemtime( get_template_directory() . '/static/css/app.css' ), 'all');
 
+	// Cookie consent: loads in the head so it is ready before any tracking (see static/consent/consent.js)
+	wp_enqueue_style('cookieconsent', get_template_directory_uri() . '/static/consent/cookieconsent.css', array(), filemtime( get_template_directory() . '/static/consent/cookieconsent.css' ), 'all');
+	wp_enqueue_style('consent-styles', get_template_directory_uri() . '/static/consent/consent.css', array('cookieconsent'), filemtime( get_template_directory() . '/static/consent/consent.css' ), 'all');
+	wp_enqueue_script( 'cookieconsent', get_template_directory_uri() . '/static/consent/cookieconsent.umd.js', array(), filemtime( get_template_directory() . '/static/consent/cookieconsent.umd.js' ), array( 'strategy' => 'defer', 'in_footer' => false ) );
+	wp_enqueue_script( 'consent-scripts', get_template_directory_uri() . '/static/consent/consent.js', array('cookieconsent'), filemtime( get_template_directory() . '/static/consent/consent.js' ), array( 'strategy' => 'defer', 'in_footer' => false ) );
+
 	remove_action('wp_head', 'print_emoji_detection_script', 7);
 	remove_action('wp_print_styles', 'print_emoji_styles');
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );

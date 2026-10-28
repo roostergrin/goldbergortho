@@ -1,0 +1,107 @@
+.pages-inner
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap.content_full
+      .container_manual.clearfix
+        #content_left
+          h1 Cookie Policy
+          .content_all.policy-page
+            p.policy-updated Last updated: October 22, 2026
+            p This Cookie Policy explains how Goldberg Orthodontics uses cookies and similar technologies on www.goldbergortho.com. It should be read together with our #[router-link(to='/privacy-policy') Privacy Policy].
+
+            h2 What cookies are
+            p Cookies are small files that a website stores in your browser. Similar technologies, such as pixels, tags and local storage, work in a similar way. Some are needed for the website to work; others help us understand how the site is used or measure our advertising.
+
+            h2 Your choices
+            p We only use cookies that are strictly necessary unless you agree to more. When you first visit, you can accept all, reject all or choose by category, and you can change your mind at any time. Rejecting cookies does not affect your ability to use the website or request an appointment.
+            button.cookie-prefs-btn(type='button' @click='openCookiePreferences') Change cookie preferences
+            p If your browser sends a #[a(href='https://globalprivacycontrol.org/' target='_blank' rel='noopener') Global Privacy Control] (GPC) signal, marketing cookies are turned off and cannot be enabled. You can also block or delete cookies in your browser settings, though some parts of the website may then not work as expected.
+
+            h2 Cookies we use
+            h3 Strictly necessary (always on)
+            p Needed for the website to work, keep it secure and remember your cookie choices.
+            .policy-table-wrap
+              table
+                thead
+                  tr
+                    th Cookie / storage
+                    th Provider
+                    th Purpose
+                    th Duration
+                tbody
+                  tr
+                    td cc_cookie
+                    td Goldberg Orthodontics
+                    td Remembers your cookie choices
+                    td 6 months
+                  tr
+                    td browserupdateorg
+                    td Goldberg Orthodontics (browser-update.org)
+                    td Remembers that you closed the outdated-browser notice
+                    td Up to 1 week
+                  tr
+                    td uw-* (local storage)
+                    td UserWay
+                    td Remembers your accessibility settings
+                    td Until cleared
+                  tr
+                    td __cf_bm, cf_clearance
+                    td Vimeo (Cloudflare)
+                    td Security checks for embedded videos
+                    td Up to 1 year
+
+            h3 Analytics (off unless you allow them)
+            p Help us understand how visitors use the website so we can improve it.
+            .policy-table-wrap
+              table
+                thead
+                  tr
+                    th Cookie
+                    th Provider
+                    th Purpose
+                    th Duration
+                tbody
+                  tr
+                    td _ga, _ga_*
+                    td Google Analytics
+                    td Distinguishes visitors and sessions
+                    td Up to 13 months
+
+            h3 Marketing (off unless you allow them)
+            p Measure and improve our advertising and help us follow up on enquiries. These providers may combine this data with other information they hold about you.
+            .policy-table-wrap
+              table
+                thead
+                  tr
+                    th Cookie
+                    th Provider
+                    th Purpose
+                    th Duration
+                tbody
+                  tr
+                    td _gcl_au, _gcl_*
+                    td Google Ads
+                    td Measures ad clicks and conversions
+                    td 90 days
+                  tr
+                    td _fbp, _fbc
+                    td Meta (Facebook / Instagram)
+                    td Measures ad performance and form submissions
+                    td 90 days
+                  tr
+                    td prism_*
+                    td ActiveCampaign
+                    td Records website visits for email follow-up
+                    td 30 days
+
+            p Some of these providers also set cookies on their own websites (for example facebook.com or doubleclick.net). If you withdraw consent we stop loading their tools on this website, but we cannot delete cookies stored on their domains; you can remove those in your browser settings or on the provider's website.
+
+            h2 Changes to this policy
+            p We will update this policy when the cookies we use change. The "Last updated" date at the top shows when it last changed.
+
+            h2 Contact us
+            p Questions about cookies or privacy? Call us at #[a(href='tel:+15164841123') (516) 484-1123] or email #[a(href='mailto:drgoldberg@goldbergortho.com') drgoldberg@goldbergortho.com].
+
+    Footer()

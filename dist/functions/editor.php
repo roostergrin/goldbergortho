@@ -3,8 +3,8 @@
 /**
  * Hide the main editor on specific pages
  */
-// define('EDITOR_HIDE_PAGE_TITLES', json_encode(array('Our Practice')));
-// define('EDITOR_HIDE_PAGE_TEMPLATES', json_encode(array('template-cars.php')));
+define('EDITOR_HIDE_PAGE_TITLES', json_encode(array('Our Practice')));
+define('EDITOR_HIDE_PAGE_TEMPLATES', json_encode(array('template-cars.php')));
 
 /**
  * Hide the main editor on defined pages

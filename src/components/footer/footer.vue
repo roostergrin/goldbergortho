@@ -14,6 +14,12 @@ export default {
   },
   components: {
     Icon
+  },
+  methods: {
+    // Opens the cookie consent preferences (static/consent/consent.js)
+    openCookiePreferences () {
+      window.rgShowCookiePreferences && window.rgShowCookiePreferences()
+    }
   }
 }
 </script>

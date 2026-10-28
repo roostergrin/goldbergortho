@@ -7,6 +7,7 @@ include_once(get_template_directory() . '/functions/filters.php');
 include_once(get_template_directory() . '/functions/editor.php');
 include_once(get_template_directory() . '/functions/email.php');
 include_once(get_template_directory() . '/functions/custom-post.php');
+include_once(get_template_directory() . '/functions/consent.php');
 
 /**
  * rg functions and definitions

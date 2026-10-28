@@ -1,0 +1,11 @@
+{
+  "name": "goldbergortho-consent-audit",
+  "private": true,
+  "description": "Real-browser check that cookie consent is enforced. Needs Node 18+. See PRIVACY.md.",
+  "scripts": {
+    "audit": "node audit.js"
+  },
+  "dependencies": {
+    "playwright": "1.58.0"
+  }
+}

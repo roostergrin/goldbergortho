@@ -41,6 +41,8 @@ import ThreeDPrinter from '@/pages/3d-printer/3d-printer'
 import Planmeca from '../pages/planmeca-3d/planmeca.vue'
 import Sitemap from '@/pages/sitemap/sitemap'
 import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
+import PrivacyPolicy from '@/pages/privacy-policy/privacy-policy'
+import CookiePolicy from '@/pages/cookie-policy/cookie-policy'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
 
@@ -294,6 +296,18 @@ const router = new VueRouter({
       name: 'Accessibility Statement',
       navigation: false,
       component: accessibilityStatement
+    },
+    {
+      path: '/privacy-policy',
+      name: 'Privacy Policy',
+      navigation: false,
+      component: PrivacyPolicy
+    },
+    {
+      path: '/cookie-policy',
+      name: 'Cookie Policy',
+      navigation: false,
+      component: CookiePolicy
     },
     {
       path: '/styleguide',

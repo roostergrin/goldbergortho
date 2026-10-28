@@ -3,13 +3,11 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WBT6DBC3');</script>
-    <!-- End Google Tag Manager -->
+    <!--
+      Cookie consent: every non-essential tracker is opt-in.
+      Google Tag Manager (GTM-WBT6DBC3) and Google Analytics (G-N28QPM3261) are loaded by static/consent/consent.js.
+      Other trackers below use type="text/plain" data-category="analytics|marketing" so they only run after consent.
+    -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
@@ -19,18 +17,8 @@
     
     <?php wp_head(); ?>
     
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N28QPM3261
-  "></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-N28QPM3261');
-  </script>
-
-  <script type="text/javascript">
+  <!-- ActiveCampaign site tracking (marketing consent) -->
+  <script type="text/plain" data-category="marketing">
 
   (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new
   Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
@@ -40,32 +28,10 @@
   vgo('process');
   </script>
 
-  <!-- Facebook Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '224844199132132');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=224844199132132&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Facebook Pixel Code -->
-
   <meta name="facebook-domain-verification" content="w7m5y5yms0jt3s8l5riwn1vao2cba4" />
     
   </head>
   <body onload="codeAddress(); codeAddress2(); codeAddress3();">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBT6DBC3"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   <div id='app' role='application'></div>
 
     <iframe style='display:none' name="NR4BranchIFrameCheckIn" id="NR4BranchIFrameCheckIn" title="Form" style="margin:0px;padding:0px;border:0px;border-style:none;width:100%;min-height:500px;overflow:hidden;" scrolling="no" src="" ></iframe>
@@ -116,18 +82,6 @@
           x.style.display = "none";
 			}
 		}
-  </script>
-  <!-- <script type="text/javascript" async defer src="https://app.smilesnap.com/app/GSpGRfKWmKWqqwAAqSw2y5Gu/loader.js"></script> -->
-  <script type="text/javascript">
-    window.__smilesnap = window.__smilesnap || [];
-    window.__smilesnap.cid = 'GSpGRfKWmKWqqwAAqSw2y5Gu';
-
-    (function() {
-    var ss = document.createElement('script'); ss.type = 'text/javascript'; ss.async = true;
-    ss.src = 'https://app-cdn.smilesnap.com/js/loader.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(ss, s);
-    })();
   </script>
     
   <script type="text/javascript">

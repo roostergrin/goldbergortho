@@ -1,0 +1,71 @@
+.pages-inner
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap.content_full
+      .container_manual.clearfix
+        #content_left
+          h1 Privacy Policy
+          .content_all.policy-page
+            p.policy-updated Last updated: October 22, 2026
+            p This Privacy Policy explains how Goldberg Orthodontics ("we", "us" or "our") collects, uses and shares information when you visit www.goldbergortho.com (the "website"). It applies to this website only.
+
+            h2 Patient health information
+            p Information you give us as a patient, including health history and other patient forms, is protected health information under HIPAA. We handle it as described in our #[a(href='/wp-content/uploads/2025/02/privacy-notice.pdf' target='_blank' rel='noopener') Notice of Privacy Practices], which takes priority over this policy for that information. Please do not include detailed medical information in general website enquiries.
+
+            h2 Information we collect
+            h3 Information you give us
+            p When you request an appointment or virtual consultation, contact us, or fill out a form, we collect what you enter, such as your name, email address, phone number, preferred appointment times, your message and, for virtual consultations, any photos you choose to upload. Our online forms are provided by PPL Practice on our behalf.
+            h3 Information collected automatically
+            p When you visit the website, our servers and service providers receive basic technical information such as your IP address, browser type, device type and the pages you request. This is needed to deliver and secure the website.
+            p With your permission only, we also use analytics and marketing cookies and similar technologies to understand how the website is used and to measure our advertising. These stay off unless you turn them on. See our #[router-link(to='/cookie-policy') Cookie Policy] for details.
+
+            h2 How we use information
+            ul
+              li To respond to your enquiries and schedule appointments and consultations.
+              li To provide orthodontic care and related services.
+              li To operate, secure and improve the website.
+              li If you allow analytics cookies, to understand how visitors use the website.
+              li If you allow marketing cookies, to measure and improve our advertising.
+              li To comply with legal obligations.
+
+            h2 Cookies and your choices
+            p Non-essential cookies are off by default. When you first visit, you can accept all, reject all or choose by category. You can change your choice at any time:
+            button.cookie-prefs-btn(type='button' @click='openCookiePreferences') Change cookie preferences
+            p We honor the #[a(href='https://globalprivacycontrol.org/' target='_blank' rel='noopener') Global Privacy Control] (GPC) signal: if your browser sends it, marketing cookies are turned off and cannot be enabled.
+
+            h2 How we share information
+            p We share information only as described here:
+            ul
+              li #[strong Service providers] who help us run the website and our practice, such as our website host, PPL Practice (online forms and scheduling), ActiveCampaign (email communication) and UserWay (accessibility tool). They may use the information only to provide services to us.
+              li #[strong Analytics and advertising partners], only if you allow those cookies: Google (Analytics and Ads), Meta (Facebook and Instagram) and ActiveCampaign. These partners receive information about your visit to this website, such as the pages you view, and may combine it with other information they hold about you, under their own privacy policies.
+              li #[strong Legal and safety reasons], when required by law or to protect the rights and safety of our patients, staff or others.
+            p We do not sell your personal information for money. Some state laws treat allowing advertising partners to collect information through marketing cookies as "sharing" or "targeted advertising". You can turn this off at any time with the cookie preferences button above, or by using GPC.
+
+            h2 Children
+            p This website is intended for adults, including parents and guardians of minor patients. We do not knowingly collect personal information online from children under 13. A parent or guardian should complete forms for a minor. If you believe a child under 13 has given us information through the website, please contact us and we will delete it.
+
+            h2 Security and retention
+            p We use reasonable administrative, technical and physical safeguards to protect information. No website or online transmission is completely secure. We keep information only as long as needed for the purposes above or as required by law. Records of your cookie choices are kept so that we can show what you agreed to.
+
+            h2 Your rights
+            p Depending on where you live, you may have the right to request access to, correction of or deletion of your personal information, and to opt out of targeted advertising. To make a request, contact us using the details below. We will not discriminate against you for exercising your privacy rights. Requests about patient health records are handled under our Notice of Privacy Practices.
+
+            h2 Other websites
+            p The website links to and embeds content from other websites, such as social media profiles, review sites and videos. Those websites have their own privacy policies, and we are not responsible for their practices.
+
+            h2 Changes to this policy
+            p We may update this policy from time to time. The "Last updated" date at the top shows when it last changed.
+
+            h2 Contact us
+            p
+              | Goldberg Orthodontics
+              br
+              | 1044 Northern Blvd #108, Roslyn, NY 11576
+              br
+              | Phone: #[a(href='tel:+15164841123') (516) 484-1123]
+              br
+              | Email: #[a(href='mailto:drgoldberg@goldbergortho.com') drgoldberg@goldbergortho.com]
+
+    Footer()
