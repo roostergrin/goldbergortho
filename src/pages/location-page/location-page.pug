@@ -1,0 +1,24 @@
+.pages-inner.apartpage.locationpage
+  Loader(v-show='loading')
+  .content_part(v-if='props && !loading')
+    Header()
+    .innerpage-top(v-bind:style="{ backgroundImage: 'url('+ propspageheader.acf.innerpage_top_bg +')'}")
+    .innerpage_content_wrap
+      .container_manual.clearfix
+        #content_left
+          h1(v-if='props.title.rendered' v-html:span='props.title.rendered')
+          .content_all(v-if='props.content.rendered' v-html:span='props.content.rendered')
+        #content_right
+          .hide-stock(v-if='props.better_featured_image')
+            img(v-bind:src='props.better_featured_image.source_url' alt='')
+          .subnav_menu.subnav_areas
+            h4 Areas We Serve
+            .subnav_area(v-for='area in serviceAreas' v-bind:key='area.town')
+              h5 {{ area.town }}
+              ul
+                li(v-for='link in area.links' v-bind:key='link.slug')
+                  router-link(v-bind:to='"/" + link.slug')
+                    span {{ link.label }}
+            router-link.subnav_more(to='/what-sets-us-apart')
+              span What Sets Us Apart
+    Footer()

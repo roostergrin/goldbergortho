@@ -1,4 +1,19 @@
 .footer(v-if='props')
+  .footer_areas
+    .container_manual.clearfix
+      .footer_areas_intro
+        h3 Areas We Serve
+        p Families across the North Shore visit our Roslyn office.
+      .footer_areas_list
+        .footer_area(v-for='area in serviceAreas' v-bind:key='area.town')
+          h4 {{ area.town }}
+          ul
+            li(v-for='link in area.links' v-bind:key='link.slug')
+              router-link(v-bind:to='"/" + link.slug') {{ link.label }}
+      a.footer_emergency(v-if='propsheader.acf.phone_number' v-bind:href='"tel:" + propsheader.acf.phone_number')
+        span.footer_emergency_label 24/7 Emergency Line
+        span.footer_emergency_phone(v-html:span='propsheader.acf.phone_number')
+        span.footer_emergency_note Speak directly with Dr. Goldberg
   .footer_map_widget(v-bind:style="{ backgroundImage: 'url('+ props.acf.footer_map_img +')'}")
     .container_manual.clearfix
       .ft-location

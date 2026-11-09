@@ -2471,3 +2471,132 @@ h4.techno_title
 
 #chat-box .chat-header
   background: #800020 !important
+
+// -----------------------
+// Areas We Serve (footer band) + location page sidebar
+// -----------------------
+.footer_areas
+  background: #005994
+  color: #ffffff
+  padding: 50px 0 45px
+  border-top: 4px solid #c9ae3c
+  .container_manual
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+    gap: 30px
+  &:before, &:after
+    display: none
+
+.footer_areas_intro
+  flex: 0 0 220px
+  h3
+    font-family: 'Lora', serif
+    font-weight: normal
+    font-size: 1.6em
+    line-height: 1.2em
+    margin: 0 0 12px
+    color: #ffffff
+  p
+    font-size: 0.7em
+    line-height: 1.6em
+    margin: 0
+    color: #e2e7ef
+
+.footer_areas_list
+  flex: 1 1 420px
+  display: flex
+  flex-wrap: wrap
+  gap: 25px 40px
+  .footer_area
+    flex: 1 1 140px
+  h4
+    font-family: 'Lora', serif
+    font-style: italic
+    font-weight: normal
+    font-size: 1em
+    color: #d9bd47
+    margin: 0 0 8px
+    padding-bottom: 6px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+  li
+    line-height: 1.5em
+  a
+    display: inline-block
+    padding: 4px 0
+    line-height: 1.4em
+    color: #ffffff
+    font-size: 0.7em
+    text-decoration: none
+    &:hover, &:focus
+      color: #d9bd47
+      text-decoration: underline
+
+.footer_emergency
+  flex: 0 0 230px
+  display: block
+  box-sizing: border-box
+  padding: 18px 22px
+  background: #c9ae3c
+  border-radius: 5px
+  color: #ffffff
+  text-decoration: none
+  text-align: center
+  transition: background 0.2s ease
+  span
+    display: block
+  &:hover, &:focus
+    background: #3189cc
+    color: #ffffff
+
+.footer_emergency_label
+  font-size: 0.6em
+  font-weight: 700
+  letter-spacing: 0.12em
+  text-transform: uppercase
+  line-height: 1.4em
+
+.footer_emergency_phone
+  font-family: 'Lora', serif
+  font-size: 1.25em
+  line-height: 1.5em
+
+.footer_emergency_note
+  font-size: 0.6em
+  line-height: 1.4em
+
+@media only screen and (max-width: 767px)
+  .footer_areas
+    padding: 35px 0
+    text-align: center
+  .footer_areas_intro, .footer_emergency
+    flex: 1 1 100%
+  .footer_areas_list .footer_area
+    flex: 1 1 40%
+
+.subnav_areas
+  .subnav_area
+    margin-bottom: 14px
+  h5
+    color: #ffffff
+    font-family: 'Lora', serif
+    font-style: italic
+    font-weight: normal
+    font-size: 0.8em
+    margin: 0 0 4px
+  .subnav_more
+    display: inline-block
+    margin-top: 6px
+    color: #ffffff
+    font-size: 0.65em
+    text-transform: uppercase
+    text-decoration: none
+    border-bottom: 1px solid #ffffff
+    &:hover
+      color: #c9ae3c
+      border-color: #c9ae3c

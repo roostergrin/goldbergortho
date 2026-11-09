@@ -2,8 +2,14 @@
 
 <script>
 import Icon from 'components/icon/icon'
+import { serviceAreas } from '@/shared/data/service-areas'
 
 export default {
+  data () {
+    return {
+      serviceAreas
+    }
+  },
   computed: {
     props () {
       return this.$store.state.app['footer'] || { acf: {} }

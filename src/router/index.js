@@ -43,6 +43,8 @@ import Sitemap from '@/pages/sitemap/sitemap'
 import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
 import PrivacyPolicy from '@/pages/privacy-policy/privacy-policy'
 import CookiePolicy from '@/pages/cookie-policy/cookie-policy'
+import LocationPage from '@/pages/location-page/location-page'
+import { locationSlugs } from '@/shared/data/service-areas'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
 
@@ -309,6 +311,12 @@ const router = new VueRouter({
       navigation: false,
       component: CookiePolicy
     },
+    ...locationSlugs.map(slug => ({
+      path: '/' + slug,
+      name: slug,
+      navigation: true,
+      component: LocationPage
+    })),
     {
       path: '/styleguide',
       name: 'Styleguide',
